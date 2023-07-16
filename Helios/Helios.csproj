@@ -26,6 +26,9 @@
     <None Remove="Service\" />
     <None Remove="Views\Component\" />
     <None Remove="Areas\HeliosAdmin\Views\Component\" />
+    <None Remove="Areas\HeliosAdmin\Views\CategoryStyles\" />
+    <None Remove="Views\Styles\" />
+    <None Remove="Areas\HeliosAdmin\Views\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
@@ -50,6 +53,9 @@
     <Folder Include="Service\" />
     <Folder Include="Views\Component\" />
     <Folder Include="Areas\HeliosAdmin\Views\Component\" />
+    <Folder Include="Areas\HeliosAdmin\Views\CategoryStyles\" />
+    <Folder Include="Views\Styles\" />
+    <Folder Include="Areas\HeliosAdmin\Views\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.19" />

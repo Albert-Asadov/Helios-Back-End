@@ -7,36 +7,38 @@ using Helios.ViewModel;
 using Helios.Utilities.ExtensionMethods;
 using System.Reflection.Metadata;
 using System.Xml.Linq;
+using System.ComponentModel;
 
 namespace Helios.Areas.HeliosAdmin.Controllers
 {
     [Area("HeliosAdmin")]
-    public class ComponentController : Controller
-    {
+    public class StylesController:Controller
+	{
         private readonly HeliosDbContext _context;
         private readonly IWebHostEnvironment _env;
 
-        public ComponentController(HeliosDbContext context, IWebHostEnvironment env)
-        {
+        public StylesController(HeliosDbContext context, IWebHostEnvironment env)
+		{
             _context = context;
             _env = env;
         }
 
+
         public IActionResult Index()
         {
-            List<Component> comp = _context.Components.Include(x => x.ComponentImages).ToList();
-            return View(comp);
+            List<Styles> Styles = _context.Styles.Include(x => x.stylesImages).ToList();
+            return View(Styles);
         }
 
         public IActionResult Create()
         {
-            ViewBag.Categories = _context.Categories.AsEnumerable();
+            ViewBag.Categories = _context.categoryStyles.AsEnumerable();
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ComponentVM model)
+        public async Task<IActionResult> Create(StylesVM model)
         {
             ViewBag.Categories = _context.Categories.AsEnumerable();
 
@@ -51,7 +53,7 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                 return View();
             }
 
-            Component component = new()
+            Styles styles = new()
             {
                 shortDescription = model.shortDescription,
                 textContent = model.textContent,
@@ -60,62 +62,61 @@ namespace Helios.Areas.HeliosAdmin.Controllers
             string MainPath = Path.Combine(_env.WebRootPath, "assets");
             string MainPathSecond = Path.Combine(MainPath, "image");
 
-            ComponentImage falseImage = new()
+            StylesImage falseImage = new()
             {
                 IsMain = false,
                 imagePath = await model.FalseImage.CreateImage(MainPathSecond, "BlogImages")
             };
-            component.ComponentImages.Add(falseImage);
+            styles.stylesImages.Add(falseImage);
 
-            ComponentImage main = new()
+            StylesImage main = new()
             {
                 IsMain = true,
                 imagePath = await model.MainPhoto.CreateImage(MainPathSecond, "BlogImages")
             };
-            component.ComponentImages.Add(main);
+            styles.stylesImages.Add(main);
 
             foreach (int Ids in model.CategoryIds)
             {
-                ComponentCategory category = new()
+                StylesCategory category = new()
                 {
-                   CategoryId = Ids
+                    CategoryStyleId = Ids
                 };
-                component.componentCategories.Add(category);
+                styles.stylesCategories.Add(category);
             }
 
-            _context.Components.Add(component);
+            _context.Styles.Add(styles);
 
             _context.SaveChanges();
 
-            return RedirectToAction("Index", "Component");
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Edit(int id)
         {
 
             if (id == 0) return BadRequest();
-            ViewBag.Categories = _context.Categories.AsEnumerable();
-            ComponentVM? model = EditedModel(id);
+            ViewBag.Categories = _context.categoryStyles.AsEnumerable();
+            StylesVM? model = EditedModel(id);
 
             if (model is null) return BadRequest();
 
             return View(model);
         }
 
-
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, ComponentVM edited)
+        public async Task<IActionResult> Edit(int id, StylesVM edited)
         {
             ViewBag.Categories = _context.Categories.AsEnumerable();
 
-            ComponentVM? model = EditedModel(id);
+            StylesVM? model = EditedModel(id);
 
-            Component? component = await _context.Components.Include(x => x.componentCategories).Include(x => x.ComponentImages).FirstOrDefaultAsync(x => x.Id == id);
+            Styles? styleses = await _context.Styles.Include(x => x.stylesCategories).Include(x => x.stylesImages).FirstOrDefaultAsync(x => x.Id == id);
 
-            if (component is null) return BadRequest();
+            if (styleses is null) return BadRequest();
 
-            IEnumerable<string> removables = component.ComponentImages.Where(p => !edited.ImageIds.Contains(p.Id)).Select(i => i.imagePath).AsEnumerable();
+            IEnumerable<string> removables = styleses.stylesImages.Where(p => !edited.ImageIds.Contains(p.Id)).Select(i => i.imagePath).AsEnumerable();
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "image");
 
             foreach (string removable in removables)
@@ -136,7 +137,7 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                     ModelState.AddModelError(string.Empty, "Please choose image which size is maximum 2MB");
                     return View();
                 }
-                await AdjustPlantPhoto(true, edited.MainPhoto, component);
+                await AdjustPlantPhoto(true, edited.MainPhoto, styleses);
             }
 
             if (edited.FalseImage is not null)
@@ -151,30 +152,30 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                     ModelState.AddModelError(string.Empty, "Please choose image which size is maximum 2MB");
                     return View();
                 }
-                await AdjustPlantPhoto(false, edited.FalseImage, component);
+                await AdjustPlantPhoto(false, edited.FalseImage, styleses);
             }
 
             if (edited.CategoryIds != null)
             {
-                component.componentCategories.RemoveAll(pt => !edited.CategoryIds.Contains(pt.CategoryId));
+                styleses.stylesCategories.RemoveAll(pt => !edited.CategoryIds.Contains(pt.CategoryStyleId));
                 foreach (int categoryId in edited.CategoryIds)
                 {
-                    Category category = await _context.Categories.FirstOrDefaultAsync(c => c.Id == categoryId);
+                    CategoryStyle category = await _context.categoryStyles.FirstOrDefaultAsync(c => c.Id == categoryId);
                     if (category is not null)
                     {
-                        ComponentCategory componentCategory = new() { Category = category };
-                        component.componentCategories.Add(componentCategory);
+                        StylesCategory componentCategory = new() { CategoryStyle = category };
+                        styleses.stylesCategories.Add(componentCategory);
                     }
                 }
             }
 
-            component.ComponentImages.RemoveAll(p => !edited.ImageIds.Contains(p.Id));
+            styleses.stylesImages.RemoveAll(p => !edited.ImageIds.Contains(p.Id));
 
-            component.shortDescription = edited.shortDescription;
+            styleses.shortDescription = edited.shortDescription;
 
-            component.textContent = edited.textContent;
+            styleses.textContent = edited.textContent;
 
-            component.URL = edited.URL;
+            styleses.URL = edited.URL;
 
             _context.SaveChanges();
 
@@ -184,19 +185,19 @@ namespace Helios.Areas.HeliosAdmin.Controllers
         public IActionResult Delete(int id)
         {
             if (id == 0) return BadRequest();
-            ComponentVM? model = EditedModel(id);
+            StylesVM? model = EditedModel(id);
 
             if (model is null) return BadRequest();
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Delete(int id, ComponentVM deleteProduct)
+        public IActionResult Delete(int id, StylesVM deleteProduct)
         {
             if (id != deleteProduct.Id) return NotFound();
-            Component? comp = _context.Components.FirstOrDefault(s => s.Id == id);
-            if (comp is null) return NotFound();
-            IEnumerable<string> removables = comp.ComponentImages.Where(p => !deleteProduct.ImageIds.Contains(p.Id)).Select(i => i.imagePath)
+            Styles? styles = _context.Styles.FirstOrDefault(s => s.Id == id);
+            if (styles is null) return NotFound();
+            IEnumerable<string> removables = styles.stylesImages.Where(p => !deleteProduct.ImageIds.Contains(p.Id)).Select(i => i.imagePath)
                 .AsEnumerable();
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "image");
 
@@ -205,20 +206,19 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                 string path = Path.Combine(imagefolderPath, "BlogImages", removable);
                 Files.DeleteImage(path);
             }
-            _context.Components.Remove(comp);
+            _context.Styles.Remove(styles);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
 
-
-        private ComponentVM? EditedModel(int id)
+        private StylesVM? EditedModel(int id)
         {
-            ComponentVM? model = _context.Components.
+            StylesVM? model = _context.Styles.
 
-               Include(x => x.ComponentImages).
-               Include(x=>x.componentCategories).
+               Include(x => x.stylesImages).
+               Include(x => x.stylesCategories).
 
-                Select(x => new ComponentVM
+                Select(x => new StylesVM
                 {
                     Id = x.Id,
 
@@ -228,34 +228,34 @@ namespace Helios.Areas.HeliosAdmin.Controllers
 
                     URL = x.URL,
 
-                    CategoryIds = x.componentCategories.Select(ac => ac.CategoryId).ToList(),
+                    CategoryIds = x.stylesCategories.Select(ac => ac.CategoryStyleId).ToList(),
 
-                    AllImages = x.ComponentImages.Select(x => new ComponentImage
-                     {
-                         Id = x.Id,
+                    AllImages = x.stylesImages.Select(x => new StylesImage
+                    {
+                        Id = x.Id,
 
-                         IsMain = x.IsMain,
+                        IsMain = x.IsMain,
 
-                         imagePath = x.imagePath
+                        imagePath = x.imagePath
 
-                     }).ToList()
+                    }).ToList()
 
                 }).FirstOrDefault(x => x.Id == id);
 
             return model;
         }
 
-        private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Component component)
+        private async Task AdjustPlantPhoto(bool? ismain, IFormFile image, Styles Styles)
         {
             var imagefolderPath = Path.Combine(_env.WebRootPath, "assets", "image");
 
-            string filepath = Path.Combine(imagefolderPath, "BlogImages", component.ComponentImages.FirstOrDefault(p => p.IsMain == ismain).imagePath);
+            string filepath = Path.Combine(imagefolderPath, "BlogImages", Styles.stylesImages.FirstOrDefault(p => p.IsMain == ismain).imagePath);
 
             Files.DeleteImage(filepath);
 
-            component.ComponentImages.FirstOrDefault(p => p.IsMain == ismain).imagePath = await image.CreateImage(imagefolderPath, "BlogImages");
+            Styles.stylesImages.FirstOrDefault(p => p.IsMain == ismain).imagePath = await image.CreateImage(imagefolderPath, "BlogImages");
         }
     }
-}
 
+}
 

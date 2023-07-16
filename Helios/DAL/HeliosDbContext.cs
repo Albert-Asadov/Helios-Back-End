@@ -16,6 +16,10 @@ namespace Helios.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<ComponentImage> ComponentImages { get; set; }
         public DbSet<ComponentCategory> ComponentCategories { get; set; }
+        public DbSet<Styles> Styles { get; set; }
+        public DbSet<CategoryStyle> categoryStyles { get; set; }
+        public DbSet<StylesCategory> StylesCategories { get; set; }
+        public DbSet<StylesImage> StylesImages { get; set; }
 
     }
 }

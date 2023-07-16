@@ -840,4 +840,9 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.activeHoverLiSubMenu {
+    background-color: #232323;
+    border-color: #232323;
 }/*# sourceMappingURL=Styles.css.map */

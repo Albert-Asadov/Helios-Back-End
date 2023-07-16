@@ -1,34 +1,36 @@
-﻿@model Component
+﻿@model Styles
 
 @section CSS {
 
-    <link rel="stylesheet" href="./assets/css/Components.css">
+    <link rel="stylesheet" href="~/assets/css/Styles.css">
 
 }
 
 @{
-    List<Category> category = ViewBag.Category;
+    List<CategoryStyle> category = ViewBag.CategoryStyles;
 }
+
 <div id="rightSide">
-    <div class="subMenu_contents">
-        <div id="subMenuses" class="d-lg-block d-md-none d-none">
+    <div class="subMenu_content">
+        <div id="subMenuStyle" class="d-lg-block d-md-none d-none">
             <ul>
                 @foreach (var item in category)
                 {
+                    var isActive = item.Id == ViewBag.categoryId;
 
-                     var isActive = item.Id == ViewBag.categoryId;
+                    <a asp-controller="Styles" asp-action="LoadContent" asp-route-categoryId="@item.Id">
 
-                    <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
+                         <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
 
-                            <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
                     </a>
                 }
             </ul>
         </div>
-        <div id="contents">
+        <div id="content">
+
             <div id="smallAndMediumMenu" class="d-lg-none d-block">
                 <div class="content">
-                    <div class="imageses">
+                    <div class="imagesesH">
                         <a href="./Index.html">
                             <img src="./assets/image/TogetherLogo.svg" alt="">
                         </a>
@@ -43,22 +45,22 @@
                 <div class="contents">
                     <nav>
                         <ul>
-                            <a asp-controller="Home" asp-action="Index" class="hoverGrays">
+                            <a href="./Index.html" class="hoverGrays">
                             <li>
                                 Home
                             </li>
                             </a>
-                            <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
+                            <a href="./Introduction.html" class="hoverGrays">
                             <li>
                                 Introduction
                             </li>
                             </a>
-                            <a asp-controller="Blog" asp-action="Index" class="hoverGrays">
+                            <a href="./Blog.html" class="hoverGrays">
                             <li>
                                 Blog
                             </li>
                             </a>
-                            <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
+                            <a href="./Styles.html" class="hoverGrays activeHoverLiSubMenus ">
                             <li>
                                 Styles
                             </li>
@@ -114,40 +116,44 @@
                         </div>
                     </li>
                     @foreach (var item in category)
-                     {
-                            var isActive = item.Id == ViewBag.categoryId;
-                        <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
-                             <li class="hoverColorSubMenus  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    {
+                        var isActive = item.Id == ViewBag.categoryId;
+
+                        <a asp-controller="Styles" asp-action="LoadContent" asp-route-categoryId="@item.Id">
+
+                        <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+
                         </a>
 
-                     }
+                    }
                 </ul>
             </div>
+
             <section id="blogMainCard">
                 <div class="blogCard">
-                    <img src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
+                    <img src="~/assets/image/BlogImages/@Model.stylesImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
                 </div>
             </section>
             <section id="textContent">
                 <div class="text">
+                    
                     <p>
-                       @Model.shortDescription
+                        @Model.shortDescription
                     </p>
+                    
                 </div>
             </section>
             <section id="image">
                 <div class="imageContents">
-                    <img src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==false)?.imagePath" alt="">
+                    <img src="~/assets/image/BlogImages/@Model.stylesImages.FirstOrDefault(x=>x.IsMain ==false)?.imagePath" alt="">
                 </div>
             </section>
-
             <section id="Title-text">
                 <div class="text" style="width:100%;">
                     @Html.Raw(Model.textContent)
                 </div>
             </section>
-
-            <div class="image d-lg-block d-none">
+            <div class="imageses  d-lg-block d-none">
 
             </div>
             <section id="iframe">
@@ -159,8 +165,8 @@
             </section>
         </div>
     </div>
-    <section id="getStarteds">
-        <div class="bg-image d-lg-block d-none">
+    <section id="getStarted">
+        <div class="bg-image  d-lg-block d-none">
 
         </div>
         <div class="cardContent">
