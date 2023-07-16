@@ -1,64 +1,16 @@
 ﻿@model List<Blog>
+@{
+    int totalPage = (int)ViewBag.TotalPage;
+    int currentPage = (int)ViewBag.CurrentPage;
+}
 
-<div id="subMenuss">
-    <ul>
-        <a href="./Compenents.html">
-        <li>Buttons</li>
-        </a
-        >
-        <a href="./Compenents.html">
-        <li>Forms and Inputs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Icons</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Colors</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Grid System</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Cards</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Navigation</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Alerts and Notifications</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Modals and Dialogs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Avatars and Images</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Tables</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Cards</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Accordions and Tabs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Badges and Labels</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Progress Indicators</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Tooltips and Popovers</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Pagination</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Miscellaneous</li>
-        </a>
-    </ul>
-</div>
+@section CSS {
+
+    <link rel="stylesheet" href="./assets/css/Blog.css">
+
+}
+
+
 <div id="rightSide">
 
     <div id="smallAndMediumMenu" class="d-lg-none d-block">
@@ -78,22 +30,22 @@
         <div class="contents">
             <nav>
                 <ul>
-                    <a href="./Index.html" class="hoverGrays">
+                    <a asp-controller="Home" asp-action="Index" class="hoverGrays">
                     <li>
                         Home
                     </li>
                     </a>
-                    <a href="./Introduction.html" class="hoverGrays">
+                    <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
                     <li>
                         Introduction
                     </li>
                     </a>
-                    <a href="./Blog.html" class="hoverGrays activeHoverLiSubMenus ">
+                    <a asp-controller="Blog" asp-action="Index" class="hoverGrays activeHoverLiSubMenus ">
                     <li>
                         Blog
                     </li>
                     </a>
-                    <a href="./Styles.html" class="hoverGrays">
+                    <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
                     <li>
                         Styles
                     </li>
@@ -214,7 +166,7 @@
             </div>
         </div>
     </section>
-    <section id="cards">
+    <section id="cards" style="z-index:100;">
 
         <div class="cards-content">
             <div class="row gx-3 gy-3">
@@ -223,9 +175,9 @@
                 {
                     <div class="col-lg-4 col-12 col-md-6">
                         <a asp-controller="BlogInner" asp-action="Index" asp-route-id="@item.Id">
-                            <div class="card">
-                                <div class="image">
-                                    <img src="~/assets/image/img.jpg" alt="">
+                            <div class="card" style="height: 100%;">
+                                <div class="image" style="height:144px;">
+                                    <img style="object-fit:cover !important;" src="~/assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
                                 </div>
                                 <div class="typography-content">
                                     <div class="titleContent">
@@ -233,9 +185,9 @@
                                             @item.TitleCard
                                         </p>
                                     </div>
-                                    <div class="textContent">
+                                    <div class="textContent"  style="width:100%;">
                                         <p>
-                                           @item.ShortDescription
+                                            @item.ShortDescription
                                         </p>
                                     </div>
                                 </div>
@@ -246,30 +198,21 @@
 
             </div>
         </div>
+
         <div class="pagination">
             <ul>
-                <a href="" class="activePagination">
-                <li>
-                    1
-                </li>
-                </a>
-                <a href="">
-                <li>
-                    2
-                </li>
-                </a>
-                <a href="">
-                <li>
-                    3
-                </li>
-                </a>
-                <a href="">
-                <li>
-                    4
-                </li>
-                </a>
+                @for (int i = 1; i <= totalPage; i++)
+                {
+                    string activeClass = (i == currentPage) ? "activePagination" : "";
+                    <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
+                        <li>
+                            @i
+                        </li>
+                    </a>
+                }
             </ul>
         </div>
+
     </section>
     <div class="imageBg d-lg-block d-none">
 
@@ -312,8 +255,3 @@
         </div>
     </section>
 </div>
-
-@section Script{
-    <script src="~/assets/js/Blog.js"></script>
-
-}

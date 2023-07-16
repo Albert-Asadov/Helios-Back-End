@@ -15,6 +15,74 @@
           }
         }
       },
+      "jQuery/1.4.4": {
+        "type": "package"
+      },
+      "Microsoft.AspNet.Mvc/5.2.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "[3.2.9, 3.3.0)",
+          "Microsoft.AspNet.WebPages": "[3.2.9, 3.3.0)"
+        },
+        "compile": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Mvc.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.Razor/3.2.9": {
+        "type": "package",
+        "compile": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Razor.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebPages/3.2.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "[3.2.9, 3.3.0)",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "related": ".Deployment.xml;.Razor.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/System.Web.Helpers.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Deployment.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.Razor.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/System.Web.WebPages.dll": {
+            "related": ".Deployment.xml;.Razor.xml;.xml"
+          }
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -456,6 +524,15 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
       "Microsoft.Win32.Registry/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -782,6 +859,28 @@
             "rid": "win"
           }
         }
+      },
+      "TinyMCE/3.4.7": {
+        "type": "package"
+      },
+      "TinyMCE.jQuery/3.4.7": {
+        "type": "package",
+        "dependencies": {
+          "JQuery": "(1.4.3, )",
+          "TinyMCE": "3.4.7"
+        }
+      },
+      "TinyMCE.MVC/3.4.7": {
+        "type": "package",
+        "dependencies": {
+          "TinyMCE": "3.4.7"
+        }
+      },
+      "TinyMCE.MVC.JQuery/3.4.7": {
+        "type": "package",
+        "dependencies": {
+          "TinyMCE.JQuery": "3.4.7"
+        }
       }
     }
   },
@@ -800,6 +899,75 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/1.4.4": {
+      "sha512": "kexCeYIZehR5fRjo8CK1sngN5SZEQRFNfCYZHMS1RxwEEiSKetBw/gliYJcLJdJEBB+e9aHqleLCjuaSI7u23g==",
+      "type": "package",
+      "path": "jquery/1.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.4.4-vsdoc.js",
+        "Content/Scripts/jquery-1.4.4.js",
+        "Content/Scripts/jquery-1.4.4.min.js",
+        "jquery.1.4.4.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Mvc/5.2.9": {
+      "sha512": "bcekKshCAh7kTWSMZPavQStSZQF/QmjEjO2gVWGITEd0/t5eRlb+ZLDE+az2qY1bZ8L6Hz0OCNeS0uzXtJcK5w==",
+      "type": "package",
+      "path": "microsoft.aspnet.mvc/5.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Mvc.dll",
+        "lib/net45/System.Web.Mvc.xml",
+        "microsoft.aspnet.mvc.5.2.9.nupkg.sha512",
+        "microsoft.aspnet.mvc.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Razor/3.2.9": {
+      "sha512": "QOJEnEw3xp+t5lMvYR5nGCF4CfZpHqr2p8uZOBEgDZoB6r2txtSj6581YNr+/dOHjI3YRlo1QAKGQoSohbQ/KA==",
+      "type": "package",
+      "path": "microsoft.aspnet.razor/3.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Razor.dll",
+        "lib/net45/System.Web.Razor.xml",
+        "microsoft.aspnet.razor.3.2.9.nupkg.sha512",
+        "microsoft.aspnet.razor.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.WebPages/3.2.9": {
+      "sha512": "yByb721lwv8YFsx1oKA5CLKXa89XVbVMkPafS4bg/bPelBEgChq/coFBQEkA4kwcabG7AR56w3vapnoZUfr2Cw==",
+      "type": "package",
+      "path": "microsoft.aspnet.webpages/3.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Web.config.install.xdt",
+        "Content/Web.config.uninstall.xdt",
+        "NET.icon.png",
+        "NET_Library_EULA_ENU.txt",
+        "lib/net45/System.Web.Helpers.dll",
+        "lib/net45/System.Web.Helpers.xml",
+        "lib/net45/System.Web.WebPages.Deployment.dll",
+        "lib/net45/System.Web.WebPages.Deployment.xml",
+        "lib/net45/System.Web.WebPages.Razor.dll",
+        "lib/net45/System.Web.WebPages.Razor.xml",
+        "lib/net45/System.Web.WebPages.dll",
+        "lib/net45/System.Web.WebPages.xml",
+        "microsoft.aspnet.webpages.3.2.9.nupkg.sha512",
+        "microsoft.aspnet.webpages.nuspec"
       ]
     },
     "Microsoft.CSharp/4.5.0": {
@@ -1444,6 +1612,18 @@
         "version.txt"
       ]
     },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "type": "package",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.Web.Infrastructure.dll",
+        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+        "microsoft.web.infrastructure.nuspec"
+      ]
+    },
     "Microsoft.Win32.Registry/4.7.0": {
       "sha512": "KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "type": "package",
@@ -2003,13 +2183,319 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TinyMCE/3.4.7": {
+      "sha512": "LC+uwr2mraVwhevkkkj67rdhMMQtCLQITsEAH4wIsVRGmOEj+uTJvC1p4NoycFD7cqfQ3DLbviyz70j1ZWizOw==",
+      "type": "package",
+      "path": "tinymce/3.4.7",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/scripts/tinymce/langs/en.js",
+        "content/scripts/tinymce/license.txt",
+        "content/scripts/tinymce/plugins/advhr/css/advhr.css",
+        "content/scripts/tinymce/plugins/advhr/editor_plugin.js",
+        "content/scripts/tinymce/plugins/advhr/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/advhr/js/rule.js",
+        "content/scripts/tinymce/plugins/advhr/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/advhr/rule.htm",
+        "content/scripts/tinymce/plugins/advimage/css/advimage.css",
+        "content/scripts/tinymce/plugins/advimage/editor_plugin.js",
+        "content/scripts/tinymce/plugins/advimage/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/advimage/image.htm",
+        "content/scripts/tinymce/plugins/advimage/img/sample.gif",
+        "content/scripts/tinymce/plugins/advimage/js/image.js",
+        "content/scripts/tinymce/plugins/advimage/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/advlink/css/advlink.css",
+        "content/scripts/tinymce/plugins/advlink/editor_plugin.js",
+        "content/scripts/tinymce/plugins/advlink/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/advlink/js/advlink.js",
+        "content/scripts/tinymce/plugins/advlink/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/advlink/link.htm",
+        "content/scripts/tinymce/plugins/advlist/editor_plugin.js",
+        "content/scripts/tinymce/plugins/advlist/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/autolink/editor_plugin.js",
+        "content/scripts/tinymce/plugins/autolink/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/autoresize/editor_plugin.js",
+        "content/scripts/tinymce/plugins/autoresize/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/autosave/editor_plugin.js",
+        "content/scripts/tinymce/plugins/autosave/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/autosave/langs/en.js",
+        "content/scripts/tinymce/plugins/bbcode/editor_plugin.js",
+        "content/scripts/tinymce/plugins/bbcode/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/contextmenu/editor_plugin.js",
+        "content/scripts/tinymce/plugins/contextmenu/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/directionality/editor_plugin.js",
+        "content/scripts/tinymce/plugins/directionality/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/emotions/editor_plugin.js",
+        "content/scripts/tinymce/plugins/emotions/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/emotions/emotions.htm",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-cool.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-cry.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-embarassed.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-foot-in-mouth.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-frown.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-innocent.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-kiss.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-laughing.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-money-mouth.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-sealed.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-smile.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-surprised.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-tongue-out.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-undecided.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-wink.gif",
+        "content/scripts/tinymce/plugins/emotions/img/smiley-yell.gif",
+        "content/scripts/tinymce/plugins/emotions/js/emotions.js",
+        "content/scripts/tinymce/plugins/emotions/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/example/dialog.htm",
+        "content/scripts/tinymce/plugins/example/editor_plugin.js",
+        "content/scripts/tinymce/plugins/example/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/example/img/example.gif",
+        "content/scripts/tinymce/plugins/example/js/dialog.js",
+        "content/scripts/tinymce/plugins/example/langs/en.js",
+        "content/scripts/tinymce/plugins/example/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/example_dependency/editor_plugin.js",
+        "content/scripts/tinymce/plugins/example_dependency/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/fullpage/css/fullpage.css",
+        "content/scripts/tinymce/plugins/fullpage/editor_plugin.js",
+        "content/scripts/tinymce/plugins/fullpage/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/fullpage/fullpage.htm",
+        "content/scripts/tinymce/plugins/fullpage/js/fullpage.js",
+        "content/scripts/tinymce/plugins/fullpage/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/fullscreen/editor_plugin.js",
+        "content/scripts/tinymce/plugins/fullscreen/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/fullscreen/fullscreen.htm",
+        "content/scripts/tinymce/plugins/iespell/editor_plugin.js",
+        "content/scripts/tinymce/plugins/iespell/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/inlinepopups/editor_plugin.js",
+        "content/scripts/tinymce/plugins/inlinepopups/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/alert.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/button.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif",
+        "content/scripts/tinymce/plugins/inlinepopups/skins/clearlooks2/window.css",
+        "content/scripts/tinymce/plugins/inlinepopups/template.htm",
+        "content/scripts/tinymce/plugins/insertdatetime/editor_plugin.js",
+        "content/scripts/tinymce/plugins/insertdatetime/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/layer/editor_plugin.js",
+        "content/scripts/tinymce/plugins/layer/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/legacyoutput/editor_plugin.js",
+        "content/scripts/tinymce/plugins/legacyoutput/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/lists/editor_plugin.js",
+        "content/scripts/tinymce/plugins/lists/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/media/css/media.css",
+        "content/scripts/tinymce/plugins/media/editor_plugin.js",
+        "content/scripts/tinymce/plugins/media/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/media/js/embed.js",
+        "content/scripts/tinymce/plugins/media/js/media.js",
+        "content/scripts/tinymce/plugins/media/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/media/media.htm",
+        "content/scripts/tinymce/plugins/media/moxieplayer.swf",
+        "content/scripts/tinymce/plugins/nonbreaking/editor_plugin.js",
+        "content/scripts/tinymce/plugins/nonbreaking/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/noneditable/editor_plugin.js",
+        "content/scripts/tinymce/plugins/noneditable/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/pagebreak/editor_plugin.js",
+        "content/scripts/tinymce/plugins/pagebreak/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/paste/editor_plugin.js",
+        "content/scripts/tinymce/plugins/paste/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/paste/js/pastetext.js",
+        "content/scripts/tinymce/plugins/paste/js/pasteword.js",
+        "content/scripts/tinymce/plugins/paste/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/paste/pastetext.htm",
+        "content/scripts/tinymce/plugins/paste/pasteword.htm",
+        "content/scripts/tinymce/plugins/preview/editor_plugin.js",
+        "content/scripts/tinymce/plugins/preview/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/preview/example.html",
+        "content/scripts/tinymce/plugins/preview/jscripts/embed.js",
+        "content/scripts/tinymce/plugins/preview/preview.html",
+        "content/scripts/tinymce/plugins/print/editor_plugin.js",
+        "content/scripts/tinymce/plugins/print/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/save/editor_plugin.js",
+        "content/scripts/tinymce/plugins/save/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/searchreplace/css/searchreplace.css",
+        "content/scripts/tinymce/plugins/searchreplace/editor_plugin.js",
+        "content/scripts/tinymce/plugins/searchreplace/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/searchreplace/js/searchreplace.js",
+        "content/scripts/tinymce/plugins/searchreplace/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/searchreplace/searchreplace.htm",
+        "content/scripts/tinymce/plugins/spellchecker/css/content.css",
+        "content/scripts/tinymce/plugins/spellchecker/editor_plugin.js",
+        "content/scripts/tinymce/plugins/spellchecker/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/spellchecker/img/wline.gif",
+        "content/scripts/tinymce/plugins/style/css/props.css",
+        "content/scripts/tinymce/plugins/style/editor_plugin.js",
+        "content/scripts/tinymce/plugins/style/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/style/js/props.js",
+        "content/scripts/tinymce/plugins/style/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/style/props.htm",
+        "content/scripts/tinymce/plugins/tabfocus/editor_plugin.js",
+        "content/scripts/tinymce/plugins/tabfocus/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/table/cell.htm",
+        "content/scripts/tinymce/plugins/table/css/cell.css",
+        "content/scripts/tinymce/plugins/table/css/row.css",
+        "content/scripts/tinymce/plugins/table/css/table.css",
+        "content/scripts/tinymce/plugins/table/editor_plugin.js",
+        "content/scripts/tinymce/plugins/table/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/table/js/cell.js",
+        "content/scripts/tinymce/plugins/table/js/merge_cells.js",
+        "content/scripts/tinymce/plugins/table/js/row.js",
+        "content/scripts/tinymce/plugins/table/js/table.js",
+        "content/scripts/tinymce/plugins/table/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/table/merge_cells.htm",
+        "content/scripts/tinymce/plugins/table/row.htm",
+        "content/scripts/tinymce/plugins/table/table.htm",
+        "content/scripts/tinymce/plugins/template/blank.htm",
+        "content/scripts/tinymce/plugins/template/css/template.css",
+        "content/scripts/tinymce/plugins/template/editor_plugin.js",
+        "content/scripts/tinymce/plugins/template/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/template/js/template.js",
+        "content/scripts/tinymce/plugins/template/langs/en_dlg.js",
+        "content/scripts/tinymce/plugins/template/template.htm",
+        "content/scripts/tinymce/plugins/visualchars/editor_plugin.js",
+        "content/scripts/tinymce/plugins/visualchars/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/wordcount/editor_plugin.js",
+        "content/scripts/tinymce/plugins/wordcount/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/abbr.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/acronym.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/attributes.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/cite.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/css/attributes.css",
+        "content/scripts/tinymce/plugins/xhtmlxtras/css/popup.css",
+        "content/scripts/tinymce/plugins/xhtmlxtras/del.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/editor_plugin.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/editor_plugin_src.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/ins.htm",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/abbr.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/acronym.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/attributes.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/cite.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/del.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/element_common.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/js/ins.js",
+        "content/scripts/tinymce/plugins/xhtmlxtras/langs/en_dlg.js",
+        "content/scripts/tinymce/themes/advanced/about.htm",
+        "content/scripts/tinymce/themes/advanced/anchor.htm",
+        "content/scripts/tinymce/themes/advanced/charmap.htm",
+        "content/scripts/tinymce/themes/advanced/color_picker.htm",
+        "content/scripts/tinymce/themes/advanced/editor_template.js",
+        "content/scripts/tinymce/themes/advanced/editor_template_src.js",
+        "content/scripts/tinymce/themes/advanced/image.htm",
+        "content/scripts/tinymce/themes/advanced/img/colorpicker.jpg",
+        "content/scripts/tinymce/themes/advanced/img/flash.gif",
+        "content/scripts/tinymce/themes/advanced/img/icons.gif",
+        "content/scripts/tinymce/themes/advanced/img/iframe.gif",
+        "content/scripts/tinymce/themes/advanced/img/pagebreak.gif",
+        "content/scripts/tinymce/themes/advanced/img/quicktime.gif",
+        "content/scripts/tinymce/themes/advanced/img/realmedia.gif",
+        "content/scripts/tinymce/themes/advanced/img/shockwave.gif",
+        "content/scripts/tinymce/themes/advanced/img/trans.gif",
+        "content/scripts/tinymce/themes/advanced/img/video.gif",
+        "content/scripts/tinymce/themes/advanced/img/windowsmedia.gif",
+        "content/scripts/tinymce/themes/advanced/js/about.js",
+        "content/scripts/tinymce/themes/advanced/js/anchor.js",
+        "content/scripts/tinymce/themes/advanced/js/charmap.js",
+        "content/scripts/tinymce/themes/advanced/js/color_picker.js",
+        "content/scripts/tinymce/themes/advanced/js/image.js",
+        "content/scripts/tinymce/themes/advanced/js/link.js",
+        "content/scripts/tinymce/themes/advanced/js/source_editor.js",
+        "content/scripts/tinymce/themes/advanced/langs/en.js",
+        "content/scripts/tinymce/themes/advanced/langs/en_dlg.js",
+        "content/scripts/tinymce/themes/advanced/link.htm",
+        "content/scripts/tinymce/themes/advanced/shortcuts.htm",
+        "content/scripts/tinymce/themes/advanced/skins/default/content.css",
+        "content/scripts/tinymce/themes/advanced/skins/default/dialog.css",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/buttons.png",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/items.gif",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/menu_arrow.gif",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/menu_check.gif",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/progress.gif",
+        "content/scripts/tinymce/themes/advanced/skins/default/img/tabs.gif",
+        "content/scripts/tinymce/themes/advanced/skins/default/ui.css",
+        "content/scripts/tinymce/themes/advanced/skins/highcontrast/content.css",
+        "content/scripts/tinymce/themes/advanced/skins/highcontrast/dialog.css",
+        "content/scripts/tinymce/themes/advanced/skins/highcontrast/ui.css",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/content.css",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/dialog.css",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/img/button_bg.png",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/img/button_bg_black.png",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/img/button_bg_silver.png",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/ui.css",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/ui_black.css",
+        "content/scripts/tinymce/themes/advanced/skins/o2k7/ui_silver.css",
+        "content/scripts/tinymce/themes/advanced/source_editor.htm",
+        "content/scripts/tinymce/themes/simple/editor_template.js",
+        "content/scripts/tinymce/themes/simple/editor_template_src.js",
+        "content/scripts/tinymce/themes/simple/img/icons.gif",
+        "content/scripts/tinymce/themes/simple/langs/en.js",
+        "content/scripts/tinymce/themes/simple/skins/default/content.css",
+        "content/scripts/tinymce/themes/simple/skins/default/ui.css",
+        "content/scripts/tinymce/themes/simple/skins/o2k7/content.css",
+        "content/scripts/tinymce/themes/simple/skins/o2k7/img/button_bg.png",
+        "content/scripts/tinymce/themes/simple/skins/o2k7/ui.css",
+        "content/scripts/tinymce/tiny_mce.js",
+        "content/scripts/tinymce/tiny_mce_popup.js",
+        "content/scripts/tinymce/tiny_mce_src.js",
+        "content/scripts/tinymce/utils/editable_selects.js",
+        "content/scripts/tinymce/utils/form_utils.js",
+        "content/scripts/tinymce/utils/mctabs.js",
+        "content/scripts/tinymce/utils/validate.js",
+        "tinymce.3.4.7.nupkg.sha512",
+        "tinymce.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "TinyMCE.jQuery/3.4.7": {
+      "sha512": "Js3mZnPDCuee9pirHgZNwRZeLQGPrRBDtj0scyNsrEVPWnjWlt+hqMr2b1KzaI52hS0N7RozemqpuqKsv5HDwA==",
+      "type": "package",
+      "path": "tinymce.jquery/3.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/scripts/tinymce/jquery.tinymce.js",
+        "tinymce.jquery.3.4.7.nupkg.sha512",
+        "tinymce.jquery.nuspec"
+      ]
+    },
+    "TinyMCE.MVC/3.4.7": {
+      "sha512": "H3raiUFOQVTCA4S0wEFNuz7bmcYovVsPUelxy7jQJpsVVbD9df7q+1Vu3JfCQ6fQidnkndPByuT/qQrn8ub8Gg==",
+      "type": "package",
+      "path": "tinymce.mvc/3.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Views/Shared/EditorTemplates/tinymce_full.cshtml",
+        "content/Views/Shared/EditorTemplates/tinymce_full_compressed.cshtml",
+        "tinymce.mvc.3.4.7.nupkg.sha512",
+        "tinymce.mvc.nuspec"
+      ]
+    },
+    "TinyMCE.MVC.JQuery/3.4.7": {
+      "sha512": "tgayJWP+ijuBTgU6MIjlWQqkHvo1b5+V3z1YDbAGfDye99X498imA563pLHU4ULPrLNpbUYD7zEAKpyXIMac8Q==",
+      "type": "package",
+      "path": "tinymce.mvc.jquery/3.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Views/Shared/EditorTemplates/tinymce_jquery_full.cshtml",
+        "tinymce.mvc.jquery.3.4.7.nupkg.sha512",
+        "tinymce.mvc.jquery.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNet.Mvc >= 5.2.9",
       "Microsoft.EntityFrameworkCore >= 6.0.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.19",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.19"
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.19",
+      "TinyMCE.MVC >= 3.4.7",
+      "TinyMCE.MVC.JQuery >= 3.4.7"
     ]
   },
   "packageFolders": {
@@ -2050,6 +2536,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNet.Mvc": {
+            "target": "Package",
+            "version": "[5.2.9, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.19, )"
@@ -2063,6 +2553,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.19, )"
+          },
+          "TinyMCE.MVC": {
+            "target": "Package",
+            "version": "[3.4.7, )"
+          },
+          "TinyMCE.MVC.JQuery": {
+            "target": "Package",
+            "version": "[3.4.7, )"
           }
         },
         "imports": [
@@ -2087,5 +2585,57 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "TinyMCE.jQuery 3.4.7 does not provide an inclusive lower bound for dependency jQuery (> 1.4.3). An approximate best match of jQuery 1.4.4 was resolved.",
+      "libraryId": "jQuery",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

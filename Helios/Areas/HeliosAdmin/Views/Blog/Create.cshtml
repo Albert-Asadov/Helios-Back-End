@@ -1,0 +1,60 @@
+﻿
+
+@model BlogVM
+
+
+<h1>Create</h1>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="MainPhoto" class="control-label"></label>
+                <input asp-for="MainPhoto" class="form-control" />
+                <span asp-validation-for="MainPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TitleCard" class="control-label"></label>
+                <input asp-for="TitleCard" class="form-control  textWrite" />
+                <span asp-validation-for="TitleCard" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ShortDescription" class="control-label"></label>
+                <input asp-for="ShortDescription" class="form-control" />
+                <span asp-validation-for="ShortDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CardTitleDetail" class="control-label"></label>
+                <input asp-for="CardTitleDetail" class="form-control" />
+                <span asp-validation-for="CardTitleDetail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="TextContent">Text Content</label>
+                <textarea id="TextContent" name="TextContent" class="form-control"></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script src="https://cdn.tiny.cloud/1/cyaasxmzfj9c2cpihxx7u47v3gwacbjiw47pyfnnqtas9j92/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+    tinymce.init({
+    selector: '#TextContent',
+    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+    toolbar_mode: 'floating',
+    toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+});
+    </script>

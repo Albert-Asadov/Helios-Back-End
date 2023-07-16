@@ -64,3 +64,10 @@
 /Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
 /Users/albertasadov/Desktop/Helios/Helios/obj/Debug/net6.0/Helios.csproj.CopyComplete
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.Mvc.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.Razor.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.Helpers.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.WebPages.Deployment.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.WebPages.Razor.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/System.Web.WebPages.dll
+/Users/albertasadov/Desktop/Helios/Helios/bin/Debug/net6.0/Microsoft.Web.Infrastructure.dll

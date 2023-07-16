@@ -2,6 +2,7 @@
 using Helios.DAL;
 using Helios.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Helios.Controllers;
 
@@ -16,7 +17,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        List<Blog> Blogs = _context.Blogs.ToList();
+        ViewBag.New = _context.Blogs.OrderByDescending(x => x.Id).Include(x=>x.blogImages).Take(3).ToList() ;
+        ViewBag.Design = _context.Blogs.OrderByDescending(x => x.Id).Include(x => x.blogImages).Take(6).ToList();
         return View();
     }
 }

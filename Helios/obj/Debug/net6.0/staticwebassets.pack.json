@@ -457,16 +457,288 @@
       "PackagePath": "staticwebassets/assets/.DS_Store"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Main.css",
-      "PackagePath": "staticwebassets/assets/css/Main.css"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Blog-inner.css",
+      "PackagePath": "staticwebassets/assets/css/Blog-inner.css"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Main.css.map",
-      "PackagePath": "staticwebassets/assets/css/Main.css.map"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Blog-inner.css.map",
+      "PackagePath": "staticwebassets/assets/css/Blog-inner.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Blog.css",
+      "PackagePath": "staticwebassets/assets/css/Blog.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Blog.css.map",
+      "PackagePath": "staticwebassets/assets/css/Blog.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Components.css",
+      "PackagePath": "staticwebassets/assets/css/Components.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Components.css.map",
+      "PackagePath": "staticwebassets/assets/css/Components.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Introduction.css",
+      "PackagePath": "staticwebassets/assets/css/Introduction.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Introduction.css.map",
+      "PackagePath": "staticwebassets/assets/css/Introduction.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Styles.css",
+      "PackagePath": "staticwebassets/assets/css/Styles.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/Styles.css.map",
+      "PackagePath": "staticwebassets/assets/css/Styles.css.map"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/style.css",
+      "PackagePath": "staticwebassets/assets/css/style.css"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/css/style.css.map",
+      "PackagePath": "staticwebassets/assets/css/style.css.map"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/.DS_Store",
       "PackagePath": "staticwebassets/assets/image/.DS_Store"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/109Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/109Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/12941GnQF-Tk6L._AC_.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/12941GnQF-Tk6L._AC_.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/139Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/139Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/176Firefly Zeus playing console game 4k cover photo 72130.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/176Firefly Zeus playing console game 4k cover photo 72130.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/17Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/17Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/192Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/192Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/212Firefly 3d europian woman avatar, orange background 4k resolution 62311.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/212Firefly 3d europian woman avatar, orange background 4k resolution 62311.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/21Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/21Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/289Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/289Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/295Firefly Zeus playing console game 4k cover photo 72130.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/295Firefly Zeus playing console game 4k cover photo 72130.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/298IMG_5612.jpeg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/298IMG_5612.jpeg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/29951Bkaobg6RL.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/29951Bkaobg6RL.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/3003cc0087b0961c1df9ee0c10cc3be351a.webp",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/3003cc0087b0961c1df9ee0c10cc3be351a.webp"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/315Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/315Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/335Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/335Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/349Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/349Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/366Firefly blue,white,orange gradient with noise texture 58877.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/366Firefly blue,white,orange gradient with noise texture 58877.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/40081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/40081KbgrFcqCL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/404Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/404Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/414Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/414Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/42Firefly flying british cat 75955.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/42Firefly flying british cat 75955.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/433Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/433Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/43801-DM1-Cream-PDP-1600x1200.webp",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/43801-DM1-Cream-PDP-1600x1200.webp"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/448Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/448Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/483Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/483Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/489Firefly blue,white,orange gradient with noise texture 58877.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/489Firefly blue,white,orange gradient with noise texture 58877.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/553Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/553Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/571Firefly Zeus playing console game 4k cover photo 72130.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/571Firefly Zeus playing console game 4k cover photo 72130.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/590Firefly blue,white,orange gradient with noise texture 58877.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/590Firefly blue,white,orange gradient with noise texture 58877.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/592Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/592Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/604Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/604Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/610Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/610Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/620Firefly-Zeus-playing-game-4k-4272.webp",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/620Firefly-Zeus-playing-game-4k-4272.webp"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/640Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/640Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/654Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/654Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/688Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/688Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/694Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/694Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/713Firefly 3d indian man avatar, yellow background 4k resolution 3823.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/713Firefly 3d indian man avatar, yellow background 4k resolution 3823.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/746Firefly blue,white,orange gradient with noise texture 58877.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/746Firefly blue,white,orange gradient with noise texture 58877.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/7673cc0087b0961c1df9ee0c10cc3be351a.webp",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/7673cc0087b0961c1df9ee0c10cc3be351a.webp"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/76961MQsr9LgwL._AC_UF894,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/76961MQsr9LgwL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/77051OwIOZvfnL._AC_UF894,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/77051OwIOZvfnL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/816Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/816Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/82Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/82Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/84Firefly flying british cat 4735.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/84Firefly flying british cat 4735.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/866Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/866Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/86Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/86Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 1179.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/888Firefly blue,white,orange gradient with noise texture 58877.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/888Firefly blue,white,orange gradient with noise texture 58877.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/91471lQfltQGfL._AC_UF1000,1000_QL80_.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/91471lQfltQGfL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/918Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/918Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/92Firefly blue,white,orange gradient with noise texture 68429.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/92Firefly blue,white,orange gradient with noise texture 68429.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/966Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/966Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/991.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/991.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/992Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/992Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/994Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/994Firefly BluePurpleWhite Gradient color Wave pattern Glassmorphism Effect 34374.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/img.jpg",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/img.jpg"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/img.png",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/img.png"
+    },
+    {
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/BlogImages/imgs.png",
+      "PackagePath": "staticwebassets/assets/image/BlogImages/imgs.png"
     },
     {
       "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/Firefly blogg-inner.png",
@@ -541,14 +813,6 @@
       "PackagePath": "staticwebassets/assets/image/image 1.png"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/img.jpg",
-      "PackagePath": "staticwebassets/assets/image/img.jpg"
-    },
-    {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/img.png",
-      "PackagePath": "staticwebassets/assets/image/img.png"
-    },
-    {
       "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/image/imgs.png",
       "PackagePath": "staticwebassets/assets/image/imgs.png"
     },
@@ -581,36 +845,28 @@
       "PackagePath": "staticwebassets/assets/scss/.DS_Store"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Main.scss",
-      "PackagePath": "staticwebassets/assets/scss/Main.scss"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Blog-inner.scss",
+      "PackagePath": "staticwebassets/assets/scss/Blog-inner.scss"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/image/bg-img-bottom2.svg",
-      "PackagePath": "staticwebassets/assets/scss/image/bg-img-bottom2.svg"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Blog.scss",
+      "PackagePath": "staticwebassets/assets/scss/Blog.scss"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_Blog-inner.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_Blog-inner.scss"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Components.scss",
+      "PackagePath": "staticwebassets/assets/scss/Components.scss"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_Blog.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_Blog.scss"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Introduction.scss",
+      "PackagePath": "staticwebassets/assets/scss/Introduction.scss"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_Components.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_Components.scss"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/Styles.scss",
+      "PackagePath": "staticwebassets/assets/scss/Styles.scss"
     },
     {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_Introduction.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_Introduction.scss"
-    },
-    {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_Styles.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_Styles.scss"
-    },
-    {
-      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/page/_style.scss",
-      "PackagePath": "staticwebassets/assets/scss/page/_style.scss"
+      "Id": "/Users/albertasadov/Desktop/Helios/Helios/wwwroot/assets/scss/style.scss",
+      "PackagePath": "staticwebassets/assets/scss/style.scss"
     },
     {
       "Id": "obj/Debug/net6.0/staticwebassets/msbuild.Helios.Microsoft.AspNetCore.StaticWebAssets.props",

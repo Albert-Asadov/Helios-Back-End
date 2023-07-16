@@ -1,4 +1,5 @@
 ﻿using Helios.DAL;
+using Helios.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,10 @@ builder.Services.AddDbContext<HeliosDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddScoped<LayoutService>();
+
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 

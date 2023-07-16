@@ -1,62 +1,12 @@
 ﻿
-<div id="subMenuHM">
-    <ul>
-        <a href="./Compenents.html">
-        <li class="hoverColorSubMenu">Buttons</li>
-        </a>
-        <a href="./Compenents.html">
-        <li class="hoverColorSubMenu">Forms and Inputs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Icons</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Colors</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Grid System</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Cards</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Navigation</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Alerts and Notifications</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Modals and Dialogs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Avatars and Images</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Tables</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Cards</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Accordions and Tabs</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Badges and Labels</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Progress Indicators</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Tooltips and Popovers</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Pagination</li>
-        </a>
-        <a href="./Compenents.html">
-        <li>Miscellaneous</li>
-        </a>
-    </ul>
-</div>
+@{
+    List<Blog> blog = ViewBag.New;
+
+    List<Blog> design = ViewBag.Design;
+
+
+}
+
 <div class="rightSide">
     <div id="smallAndMediumMenu" class="d-lg-none d-block">
         <div class="content">
@@ -231,7 +181,7 @@
             </div>
         </div>
     </section>
-    <section id="cards">
+    <section id="cards"    style="z-index: 100;" >
         <div class="title">
             <h2>
                 News & release notes
@@ -240,71 +190,33 @@
 
         <div class="cards-content">
             <div class="row gx-3 gy-3">
-                <div class="col-lg-4 col-md-6 col-12 salam">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="col-lg-4 col-md-6 col-12">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
+                @foreach (var item in blog)
+                    {
+                    <div class="col-lg-4 col-md-6 col-12 salam">
+                        <a asp-controller="Blog" asp-action="Index">
+                            <div class="card"  style="height: 100%;">
+                                <div class="image"  style="height:144px;">
+                                    <img style="object-fit:cover;" src="./assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
                                 </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
+                                <div class="typography-content">
+                                    <div class="titleContent">
+                                        <p>
+                                            @item.TitleCard
+                                        </p>
+                                    </div>
+                                    <div class="textContent" style="width:100%;">
+                                        <p>
+                                            @item.ShortDescription
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                }
 
-                <div class="col-lg-4 col-md-6 col-12">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -317,137 +229,32 @@
 
         <div class="cards-content">
             <div class="row gx-3 gy-3">
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
 
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
+                @foreach (var item in design)
+                {
+                    <div class="col-lg-4 col-12 col-md-6">
+                        <a asp-controller="Blog" asp-action="Index">
+                            <div class="card" style="height: 100%;">
+                                <div class="image" style="height:144px;">
+                                    <img style="object-fit:cover;" src="./assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
                                 </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
+                                <div class="typography-content">
+                                    <div class="titleContent">
+                                        <p>
+                                            @item.TitleCard
+                                        </p>
+                                    </div>
+                                    <div class="textContent" style="width:100%;">
+                                        <p>
+                                            @item.ShortDescription
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                }
 
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-12 col-md-6">
-                    <a href="./Blog.html">
-                        <div class="card">
-                            <div class="image">
-                                <img src="./assets/image/img.jpg" alt="">
-                            </div>
-                            <div class="typography-content">
-                                <div class="titleContent">
-                                    <p>
-                                        New: button group added
-                                    </p>
-                                </div>
-                                <div class="textContent">
-                                    <p>
-                                        See our new button components
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -494,9 +301,3 @@
         </div>
     </section>
 </div>
-
-@section Script{
-
-    <script src="~/assets/js/script.js"></script>
-
-}

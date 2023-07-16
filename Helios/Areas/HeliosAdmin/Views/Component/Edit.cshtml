@@ -1,0 +1,77 @@
+﻿@model ComponentVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+        .main {
+            border: 1px solid red;
+        }
+
+        .false {
+            border: 1px solid green;
+        }
+ </style>
+<h1>Edit</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-9">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div class="row images">
+                @foreach (var item in Model.AllImages)
+                {
+                    <div class="image col-lg-3" style="position:relative">
+
+                        <img style="width:150px;height:150px;object-fit:contain" src="~/assets/image/BlogImages/@item.imagePath" class=" @(item.IsMain == true ? "main" : "") ">
+                        <input type="hidden" name="ImageIds" value="@item.Id">
+
+                    </div>
+                }
+            </div>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MainPhoto" class="control-label"></label>
+                <input asp-for="MainPhoto" class="form-control" />
+                <span asp-validation-for="MainPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FalseImage" class="control-label"></label>
+                <input asp-for="FalseImage" class="form-control" />
+                <span asp-validation-for="FalseImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="shortDescription" class="control-label"></label>
+                <input asp-for="shortDescription" class="form-control" />
+                <span asp-validation-for="shortDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="URL" class="control-label"></label>
+                <input asp-for="URL" class="form-control" />
+                <span asp-validation-for="URL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="textContent">Text Content</label>
+                <textarea asp-for="textContent" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Categories</label>
+                <select asp-for="CategoryIds" asp-items="@(new SelectList(ViewBag.Categories,"Id","Name"))" class="form-control"></select>
+                <span asp-validation-for="CategoryIds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.tiny.cloud/1/cyaasxmzfj9c2cpihxx7u47v3gwacbjiw47pyfnnqtas9j92/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({
+    selector: '#textContent',
+    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+    toolbar_mode: 'floating',
+    toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+});</script>

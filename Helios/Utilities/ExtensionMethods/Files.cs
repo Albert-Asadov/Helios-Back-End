@@ -1,7 +1,8 @@
 ﻿using System;
-namespace Helios.Utilities.File
+namespace Helios.Utilities.ExtensionMethods
+
 {
-	public class Files
+	public static class Files
 	{
         public static async Task<string> CreateImage(this IFormFile file, string imagesFolderPath, string folder)
         {

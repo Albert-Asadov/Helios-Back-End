@@ -1,0 +1,197 @@
+﻿@model Component
+
+@section CSS {
+
+    <link rel="stylesheet" href="./assets/css/Components.css">
+
+}
+
+@{
+    List<Category> category = ViewBag.Category;
+}
+<div id="rightSide">
+    <div class="subMenu_contents">
+        <div id="subMenuses" class="d-lg-block d-md-none d-none">
+            <ul>
+                @foreach (var item in category)
+                {
+
+                     var isActive = item.Id == ViewBag.categoryId;
+
+                    <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
+
+                            <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    </a>
+                }
+            </ul>
+        </div>
+        <div id="contents">
+            <div id="smallAndMediumMenu" class="d-lg-none d-block">
+                <div class="content">
+                    <div class="imageses">
+                        <a href="./Index.html">
+                            <img src="./assets/image/TogetherLogo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="HamburgerMenu">
+                        <img src="./assets/image/MaskMenu.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="smallAndMediumNavBar" class="d-lg-none col-12">
+                <div class="contents">
+                    <nav>
+                        <ul>
+                            <a asp-controller="Home" asp-action="Index" class="hoverGrays">
+                            <li>
+                                Home
+                            </li>
+                            </a>
+                            <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
+                            <li>
+                                Introduction
+                            </li>
+                            </a>
+                            <a asp-controller="Blog" asp-action="Index" class="hoverGrays">
+                            <li>
+                                Blog
+                            </li>
+                            </a>
+                            <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
+                            <li>
+                                Styles
+                            </li>
+                            </a>
+                            <li class="component">
+                                <div class="accordion">
+                                    <div class="accordion-item">
+                                        <div class="accordion-header">
+                                            Components
+
+                                            <img src="./assets/image/Mask.svg" alt="">
+                                        </div>
+
+                                        <div class="accordion-content">
+                                            <ul>
+                                                <li class="hoverActives">
+                                                    WEB
+                                                </li>
+                                                <li class="hoverActives">
+                                                    IOS
+                                                    <div class="buttonNavPlanned">
+                                                        <a href="">
+                                                            Planned
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                                <li class="hoverActives">
+                                                    Android
+                                                    <div class="buttonNavPlanned">
+                                                        <a href="">
+                                                            Planned
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="subMenus" class="">
+                <ul>
+                    <li class="menuTitle">
+                        <div class="icon">
+                            <img src="./assets/image/Maskmain menu.svg" alt="">
+                        </div>
+                        <div class="text">
+                            Main Menu
+                        </div>
+                    </li>
+                    @foreach (var item in category)
+                     {
+                            var isActive = item.Id == ViewBag.categoryId;
+                        <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
+                             <li class="hoverColorSubMenus  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                        </a>
+
+                     }
+                </ul>
+            </div>
+            <section id="blogMainCard">
+                <div class="blogCard">
+                    <img src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
+                </div>
+            </section>
+            <section id="textContent">
+                <div class="text">
+                    <p>
+                       @Model.shortDescription
+                    </p>
+                </div>
+            </section>
+            <section id="image">
+                <div class="imageContents">
+                    <img src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==false)?.imagePath" alt="">
+                </div>
+            </section>
+            <section id="Title-text">
+                @Html.Raw(Model.textContent)
+            </section>
+            <div class="image d-lg-block d-none">
+
+            </div>
+            <section id="iframe">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                        src="@Model.URL"
+                        allowfullscreen frameborder="0">
+                    No Content Yet!
+                </iframe>
+            </section>
+        </div>
+    </div>
+    <section id="getStarteds">
+        <div class="bg-image d-lg-block d-none">
+
+        </div>
+        <div class="cardContent">
+            <div class="title">
+                <h3>
+                    Get Started
+                </h3>
+            </div>
+            <div class="text">
+                <p>
+                    We invite you to explore our design system and leverage its resources to enhance your
+                    product development process. By utilizing this design system, you'll save time, maintain
+                    consistency, and deliver exceptional experiences to our users.
+                </p>
+            </div>
+            <div class="navigationButtons">
+                <div class="learnMore">
+                    <a href="">
+                        Learn More
+                    </a>
+                </div>
+                <div class="getStarted">
+                    <a href="">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <ul>
+                <li class="privacy">
+                    Privacy Policy
+                </li>
+                <li class="Lightberry">
+                    Lightberry Design © 2023
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
