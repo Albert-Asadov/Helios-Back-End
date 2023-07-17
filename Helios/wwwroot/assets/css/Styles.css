@@ -205,11 +205,23 @@ body {
   background-color: #232323;
   border-color: #232323;
 }
-
+#rightSide .imageses {
+    z-index: -1;
+    top: 745px;
+    right: 0px;
+    position: absolute;
+    background-image: url("../image/bg-imgbg-rose.png");
+    width: 690px;
+    height: 750px;
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
 #rightSide .subMenu_content {
   display: grid;
   grid-template-columns: 1fr 5fr;
 }
+
 #rightSide .subMenu_content #subMenuStyle {
   display: block;
   padding: 30px 10px 30px 10px;
@@ -242,6 +254,12 @@ body {
 }
 #rightSide .subMenu_content #content {
   position: relative;
+}
+@media screen and (min-width: 1920px) {
+    #rightSide .subMenu_content #content {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 #rightSide .subMenu_content #content #smallAndMediumMenu {
   padding: 20px;

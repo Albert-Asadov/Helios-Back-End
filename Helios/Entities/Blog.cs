@@ -14,6 +14,8 @@ namespace Helios.Entities
 
 		public string CardTitleDetail { get; set; }
 
+        public bool? DesignFilter { get; set; }
+
         [AllowHtml]
 		[UIHint("tinymce_jquery_full")]
 		public string TextContent { get; set; }

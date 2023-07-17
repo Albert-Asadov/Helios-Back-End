@@ -1,4 +1,5 @@
 ﻿@model Styles
+@inject Helios.Service.LayoutService _layoutServices
 
 @section CSS {
 
@@ -11,6 +12,9 @@
 }
 
 <div id="rightSide">
+    <div class="imageses  d-lg-block d-none">
+
+    </div>
     <div class="subMenu_content">
         <div id="subMenuStyle" class="d-lg-block d-md-none d-none">
             <ul>
@@ -20,7 +24,7 @@
 
                     <a asp-controller="Styles" asp-action="LoadContent" asp-route-categoryId="@item.Id">
 
-                         <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
 
                     </a>
                 }
@@ -130,17 +134,17 @@
             </div>
 
             <section id="blogMainCard">
-                <div class="blogCard">
-                    <img src="~/assets/image/BlogImages/@Model.stylesImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
+                <div class="blogCard" style="height:100%;">
+                    <img style="object-fit:contain !important;" src="~/assets/image/BlogImages/@Model.stylesImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
                 </div>
             </section>
             <section id="textContent">
                 <div class="text">
-                    
+
                     <p>
                         @Model.shortDescription
                     </p>
-                    
+
                 </div>
             </section>
             <section id="image">
@@ -153,9 +157,7 @@
                     @Html.Raw(Model.textContent)
                 </div>
             </section>
-            <div class="imageses  d-lg-block d-none">
 
-            </div>
             <section id="iframe">
                 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                         src="@Model.URL"
@@ -166,7 +168,7 @@
         </div>
     </div>
     <section id="getStarted">
-        <div class="bg-image  d-lg-block d-none">
+        <div class="bg-image  d-lg-block d-none" style="z-index:-1;">
 
         </div>
         <div class="cardContent">
@@ -184,20 +186,22 @@
             </div>
             <div class="navigationButtons">
                 <div class="learnMore">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "LearnMoreOthers")?.Value" target="_blank">
                         Learn More
                     </a>
                 </div>
                 <div class="getStarted">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedOthers")?.Value" target="_blank">
                         Get Started
                     </a>
                 </div>
             </div>
             <ul>
+                <a style="text-decoration:none;" href="https://heliosui.notion.site/Privacy-Policy-for-Heliosui-com-324c33b5840d4d4d813723291639aacc" target="_blank">
                 <li class="privacy">
                     Privacy Policy
                 </li>
+                </a>
                 <li class="Lightberry">
                     Lightberry Design © 2023
                 </li>

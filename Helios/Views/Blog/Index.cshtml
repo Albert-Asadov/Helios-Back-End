@@ -1,4 +1,6 @@
 ﻿@model List<Blog>
+@inject Helios.Service.LayoutService _layoutServices
+
 @{
     int totalPage = (int)ViewBag.TotalPage;
     int currentPage = (int)ViewBag.CurrentPage;
@@ -13,212 +15,214 @@
 
 <div id="rightSide">
 
-    <div id="smallAndMediumMenu" class="d-lg-none d-block">
-        <div class="content">
-            <div class="image">
-                <a href="./Index.html">
-                    <img src="~/assets/image/TogetherLogo.svg" alt="">
-                </a>
-            </div>
-            <div class="HamburgerMenu">
-                <img src="~/assets/image/MaskMenu.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div id="smallAndMediumNavBar" class="d-lg-none col-12">
-        <div class="contents">
-            <nav>
-                <ul>
-                    <a asp-controller="Home" asp-action="Index" class="hoverGrays">
-                    <li>
-                        Home
-                    </li>
+    <div id="content">
+        <div id="smallAndMediumMenu" class="d-lg-none d-block">
+            <div class="content">
+                <div class="image">
+                    <a href="./Index.html">
+                        <img src="~/assets/image/TogetherLogo.svg" alt="">
                     </a>
-                    <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
-                    <li>
-                        Introduction
-                    </li>
-                    </a>
-                    <a asp-controller="Blog" asp-action="Index" class="hoverGrays activeHoverLiSubMenus ">
-                    <li>
-                        Blog
-                    </li>
-                    </a>
-                    <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
-                    <li>
-                        Styles
-                    </li>
-                    </a>
-                    <li class="component">
-                        <div class="accordion">
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    Components
-
-                                    <img src="~/assets/image/Mask.svg" alt="">
-                                </div>
-
-                                <div class="accordion-content">
-                                    <ul>
-                                        <li class="hoverActives">
-                                            WEB
-                                        </li>
-                                        <li class="hoverActives">
-                                            IOS
-                                            <div class="buttonNavPlanned">
-                                                <a href="">
-                                                    Planned
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="hoverActives">
-                                            Android
-                                            <div class="buttonNavPlanned">
-                                                <a href="">
-                                                    Planned
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <div id="subMenus" class="">
-        <ul>
-            <li class="menuTitle">
-                <div class="icon">
-                    <img src="~/assets/image/Maskmain menu.svg" alt="">
                 </div>
-                <div class="text">
-                    Main Menu
+                <div class="HamburgerMenu">
+                    <img src="~/assets/image/MaskMenu.png" alt="">
                 </div>
-            </li>
-            <a href="./Compenents.html">
-            <li class="hoverColorSubMenus">Buttons</li>
-            </a>
-            <a href="./Compenents.html">
-            <li class="hoverColorSubMenus">Forms and Inputs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Icons</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Colors</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Grid System</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Cards</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Navigation</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Alerts and Notifications</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Modals and Dialogs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Avatars and Images</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Tables</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Cards</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Accordions and Tabs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Badges and Labels</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Progress Indicators</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Tooltips and Popovers</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Pagination</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Miscellaneous</li>
-            </a>
-        </ul>
-    </div>
-
-    <section id="blogMainCard">
-        <div class="blogCard">
-            <div class="title">
-                <p>
-                    Blog
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="cards" style="z-index:100;">
-
-        <div class="cards-content">
-            <div class="row gx-3 gy-3">
-
-                @foreach (var item in Model)
-                {
-                    <div class="col-lg-4 col-12 col-md-6">
-                        <a asp-controller="BlogInner" asp-action="Index" asp-route-id="@item.Id">
-                            <div class="card" style="height: 100%;">
-                                <div class="image" style="height:144px;">
-                                    <img style="object-fit:cover !important;" src="~/assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
-                                </div>
-                                <div class="typography-content">
-                                    <div class="titleContent">
-                                        <p>
-                                            @item.TitleCard
-                                        </p>
-                                    </div>
-                                    <div class="textContent"  style="width:100%;">
-                                        <p>
-                                            @item.ShortDescription
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                }
-
             </div>
         </div>
 
-        <div class="pagination">
-            <ul>
-                @for (int i = 1; i <= totalPage; i++)
-                {
-                    string activeClass = (i == currentPage) ? "activePagination" : "";
-                    <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
+        <div id="smallAndMediumNavBar" class="d-lg-none col-12">
+            <div class="contents">
+                <nav>
+                    <ul>
+                        <a asp-controller="Home" asp-action="Index" class="hoverGrays">
                         <li>
-                            @i
+                            Home
                         </li>
-                    </a>
-                }
+                        </a>
+                        <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
+                        <li>
+                            Introduction
+                        </li>
+                        </a>
+                        <a asp-controller="Blog" asp-action="Index" class="hoverGrays activeHoverLiSubMenus ">
+                        <li>
+                            Blog
+                        </li>
+                        </a>
+                        <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
+                        <li>
+                            Styles
+                        </li>
+                        </a>
+                        <li class="component">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Components
+
+                                        <img src="~/assets/image/Mask.svg" alt="">
+                                    </div>
+
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="hoverActives">
+                                                WEB
+                                            </li>
+                                            <li class="hoverActives">
+                                                IOS
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="hoverActives">
+                                                Android
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="subMenus" class="">
+            <ul>
+                <li class="menuTitle">
+                    <div class="icon">
+                        <img src="~/assets/image/Maskmain menu.svg" alt="">
+                    </div>
+                    <div class="text">
+                        Main Menu
+                    </div>
+                </li>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Buttons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Forms and Inputs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Icons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Colors</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Grid System</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Navigation</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Alerts and Notifications</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Modals and Dialogs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Avatars and Images</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tables</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Accordions and Tabs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Badges and Labels</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Progress Indicators</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tooltips and Popovers</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Pagination</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Miscellaneous</li>
+                </a>
             </ul>
         </div>
 
-    </section>
-    <div class="imageBg d-lg-block d-none">
+        <section id="blogMainCard">
+            <div class="blogCard">
+                <div class="title">
+                    <p>
+                        Blog
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="cards" style="z-index:100;">
 
+            <div class="cards-content">
+                <div class="row gx-3 gy-3">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-12 col-md-6">
+                            <a asp-controller="BlogInner" asp-action="Index" asp-route-id="@item.Id">
+                                <div class="card" style="height: 100%;">
+                                    <div class="image" style="height:144px;">
+                                        <img style="object-fit:cover !important;" src="~/assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
+                                    </div>
+                                    <div class="typography-content">
+                                        <div class="titleContent">
+                                            <p>
+                                                @item.TitleCard
+                                            </p>
+                                        </div>
+                                        <div class="textContent" style="width:100%;">
+                                            <p>
+                                                @item.ShortDescription
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+                </div>
+            </div>
+
+            <div class="pagination">
+                <ul>
+                    @for (int i = 1; i <= totalPage; i++)
+                    {
+                        string activeClass = (i == currentPage) ? "activePagination" : "";
+                        <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
+                        <li>
+                            @i
+                        </li>
+                        </a>
+                    }
+                </ul>
+            </div>
+
+        </section>
+        <div class="imageBg d-lg-block d-none">
+
+        </div>
     </div>
     <section id="getStarted">
-        <div class="bg-image d-lg-block d-none">
+        <div class="bg-image d-lg-block d-none" style="z-index:-1;">
 
         </div>
         <div class="cardContent">
@@ -234,20 +238,22 @@
             </div>
             <div class="navigationButtons">
                 <div class="learnMore">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "LearnMoreOthers")?.Value" target="_blank">
                         Learn More
                     </a>
                 </div>
                 <div class="getStarted">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedOthers")?.Value" target="_blank">
                         Get Started
                     </a>
                 </div>
             </div>
             <ul>
+                <a style="text-decoration:none;" href="https://heliosui.notion.site/Privacy-Policy-for-Heliosui-com-324c33b5840d4d4d813723291639aacc">
                 <li class="privacy">
                     Privacy Policy
                 </li>
+                </a>
                 <li class="Lightberry">
                     Lightberry Design  © 2023
                 </li>

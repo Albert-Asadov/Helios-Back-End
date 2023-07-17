@@ -170,7 +170,18 @@ body {
 #leftSide .content nav ul .component .accordion .accordion-item .accordion-content ul li:hover {
   background-color: #0C0A0D;
 }
-
+#rightSide .image {
+    z-index: -1;
+    top: 745px;
+    right: 0px;
+    position: absolute;
+    background-image: url("../image/bg-imgbg-rose.png");
+    width: 690px;
+    height: 750px;
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
 #rightSide .subMenu_contents {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -207,6 +218,12 @@ body {
 }
 #rightSide .subMenu_contents #contents {
   position: relative;
+}
+@media screen and (min-width: 1920px) {
+    #rightSide .subMenu_contents #contents {
+        width: 70%;
+        margin: 0 auto;
+    }
 }
 #rightSide .subMenu_contents #contents #smallAndMediumMenu {
   padding: 20px;
@@ -594,17 +611,7 @@ body {
     margin-left: 30px;
   }
 }
-#rightSide .subMenu_contents #contents .image {
-  bottom: 342px;
-  right: 0px;
-  position: absolute;
-  background-image: url("../image/bg-imgbg-rose.png");
-  width: 690px;
-  height: 750px;
-  transform: rotate(0deg);
-  background-repeat: no-repeat;
-  opacity: 0.9;
-}
+
 @media screen and (min-width: 992px) and (max-width: 1400px) {
   #rightSide .subMenu_contents #contents .image {
     display: none !important;

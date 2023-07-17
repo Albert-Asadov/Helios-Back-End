@@ -34,6 +34,9 @@ namespace Helios.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool?>("DesignFilter")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ShortDescription")
                         .IsRequired()
                         .HasMaxLength(40)
@@ -185,6 +188,97 @@ namespace Helios.Migrations
                     b.ToTable("ComponentImages");
                 });
 
+            modelBuilder.Entity("Helios.Entities.Introduction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("LeftSideTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RightSideTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Introductions");
+                });
+
+            modelBuilder.Entity("Helios.Entities.IntroductionCards", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CardInsideText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardInsideTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("introductionCards");
+                });
+
+            modelBuilder.Entity("Helios.Entities.IntroductionImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool?>("IsMain")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("imagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("introductionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("introductionId");
+
+                    b.ToTable("IntroductionImage");
+                });
+
+            modelBuilder.Entity("Helios.Entities.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Key")
+                        .IsUnique();
+
+                    b.ToTable("Settings");
+                });
+
             modelBuilder.Entity("Helios.Entities.Styles", b =>
                 {
                     b.Property<int>("Id")
@@ -299,6 +393,17 @@ namespace Helios.Migrations
                     b.Navigation("Component");
                 });
 
+            modelBuilder.Entity("Helios.Entities.IntroductionImage", b =>
+                {
+                    b.HasOne("Helios.Entities.Introduction", "introduction")
+                        .WithMany("introductionImages")
+                        .HasForeignKey("introductionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("introduction");
+                });
+
             modelBuilder.Entity("Helios.Entities.StylesCategory", b =>
                 {
                     b.HasOne("Helios.Entities.CategoryStyle", "CategoryStyle")
@@ -349,6 +454,11 @@ namespace Helios.Migrations
                     b.Navigation("ComponentImages");
 
                     b.Navigation("componentCategories");
+                });
+
+            modelBuilder.Entity("Helios.Entities.Introduction", b =>
+                {
+                    b.Navigation("introductionImages");
                 });
 
             modelBuilder.Entity("Helios.Entities.Styles", b =>

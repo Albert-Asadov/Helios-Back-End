@@ -46,7 +46,14 @@
                 <input asp-for="CardTitleDetail" class="form-control" />
                 <span asp-validation-for="CardTitleDetail" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div>
+                <label>Design: </label>
+                <input type="radio" name="DesignFilter" value="true" @(Model.DesignFilter.HasValue && Model.DesignFilter.Value ? "checked" : "") /> Yes
+                <input type="radio" name="DesignFilter" value="false" @(Model.DesignFilter.HasValue && !Model.DesignFilter.Value ? "checked" : "") /> No
+            </div>
+
+
+            <div class="form-group" style="margin-top:20px;">
                 <label asp-for="TextContent">Text Content</label>
                 <textarea asp-for="TextContent" class="form-control"></textarea>
             </div>

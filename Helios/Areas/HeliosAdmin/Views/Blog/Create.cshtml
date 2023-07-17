@@ -33,7 +33,12 @@
                 <input asp-for="CardTitleDetail" class="form-control" />
                 <span asp-validation-for="CardTitleDetail" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div>
+                <label>Design: </label>
+                <input type="radio" asp-for="DesignFilter" value="true" /> Yes
+                <input type="radio" asp-for="DesignFilter" value="false" /> No
+            </div>
+            <div class="form-group" style="margin-top:20px;">
                 <label for="TextContent">Text Content</label>
                 <textarea id="TextContent" name="TextContent" class="form-control"></textarea>
             </div>

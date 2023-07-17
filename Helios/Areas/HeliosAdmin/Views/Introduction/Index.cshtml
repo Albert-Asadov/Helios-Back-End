@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Introduction>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RightSideTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LeftSideTitle)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model is not null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img class="primary-img" style="width:100px; border-radius:0px;height:100px; object-fit:contain"
+                             src="~/assets/image/BlogImages/@item.introductionImages.FirstOrDefault(x => x.IsMain == true)?.imagePath"
+                             alt="Product Images" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RightSideTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LeftSideTitle)
+                    </td>
+                    <td>
+                        <a style=" text-decoration: none; color: red;" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a style=" text-decoration: none; color: orange;" asp-action="Detail" asp-route-id="@item.Id">Detail</a> |
+                        <a style=" text-decoration: none; color: red;" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        }
+
+    </tbody>
+</table>
+

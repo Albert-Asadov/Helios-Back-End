@@ -1,0 +1,309 @@
+﻿@inject Helios.Service.LayoutService _layoutServices
+
+@model List<Introduction>
+
+@section CSS {
+
+    <link rel="stylesheet" href="./assets/css/Introduction.css">
+
+}
+
+
+<div id="rightside">
+
+    <div id="content">
+        <div id="smallAndMediumMenu" class="d-lg-none d-block">
+            <div class="content">
+                <div class="image">
+                    <a href="./Index.html">
+                        <img src="~/assets/image/TogetherLogo.svg" alt="">
+                    </a>
+                </div>
+                <div class="HamburgerMenu">
+                    <img src="~/assets/image/MaskMenu.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="smallAndMediumNavBar" class="d-lg-none col-12">
+            <div class="contents">
+                <nav>
+                    <ul>
+                        <a href="./Index.html" class="hoverGrays">
+                        <li>
+                            Home
+                        </li>
+                        </a>
+                        <a href="" class="hoverGrays activeHoverLiSubMenus ">
+                        <li>
+                            Introduction
+                        </li>
+                        </a>
+                        <a href="./Blog.html" class="hoverGrays">
+                        <li>
+                            Blog
+                        </li>
+                        </a>
+                        <a href="./Styles.html" class="hoverGrays">
+                        <li>
+                            Styles
+                        </li>
+                        </a>
+                        <li class="component">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Components
+
+                                        <img src="./assets/image/Mask.svg" alt="">
+                                    </div>
+
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="hoverActives">
+                                                WEB
+                                            </li>
+                                            <li class="hoverActives">
+                                                IOS
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="hoverActives">
+                                                Android
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id="subMenus">
+            <ul>
+                <li class="menuTitle">
+                    <div class="icon">
+                        <img src="./assets/image/Maskmain menu.svg" alt="">
+                    </div>
+                    <div class="text">
+                        Main Menu
+                    </div>
+                </li>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Buttons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Forms and Inputs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Icons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Colors</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Grid System</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Navigation</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Alerts and Notifications</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Modals and Dialogs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Avatars and Images</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tables</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Accordions and Tabs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Badges and Labels</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Progress Indicators</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tooltips and Popovers</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Pagination</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Miscellaneous</li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="mainContentLogo">
+            <div class="logo">
+                <img src="./assets/image/HeliosMainLogoSvg.svg" alt="">
+                <img src="./assets/image/Frame 39heliosUISVG Logo.svg" alt="">
+            </div>
+            <div class="texts">
+                <p>We believe in the power of design to create meaningful and impactful experiences. </p>
+            </div>
+            <div class="navigationButtonsMain col-12">
+                <div class="getPreview">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "IntroductionGetPreview")?.Value" target="_blank">
+                        <img src="./assets/image/figma_logofigmaLogo.svg" alt="">
+                        Get Preview
+                    </a>
+                </div>
+                <div class="buy">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "IntroductionBuy")?.Value" target="_blank">
+                        Buy
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="cardsComponents">
+            <div class="row gy-3 gx-5" style="display: flex; justify-content: center; align-items: center;">
+                <div class="col-xxl-4 col-lg-4 col-md-6 col-12" style="padding: 0;">
+                    <div class="cardInfo">
+                        <div class="logoImage">
+                            @foreach (var item in Model)
+                            {
+                                <img src="./assets/image/BlogImages/@item.introductionImages.FirstOrDefault(x=>x.IsMain == true).imagePath" alt="">
+                            }
+                            <div class="text-nav">
+                                <div class="text">
+                                    @foreach (var item in Model)
+                                    {
+                                        <p>@item.LeftSideTitle</p>
+                                    }
+                                </div>
+                                <div class="nav">
+                                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "IntroductionGetLeftSide")?.Value" target="_blank">
+                                        Get
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-4 col-lg-4 col-md-6  col-12" style="padding: 0;">
+                    <div class="cardInfo">
+                        <div class="logoImage">
+                            @foreach (var item in Model)
+                            {
+                                <img src="./assets/image/BlogImages/@item.introductionImages.FirstOrDefault(x => x.IsMain == false).imagePath" alt="">
+                            }
+                            <div class="text-nav">
+                                <div class="text">
+                                    @foreach (var item in Model)
+                                    {
+                                        <p>@item.RightSideTitle</p>
+                                    }
+                                </div>
+                                <div class="nav">
+                                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "IntroductionGetRightSide")?.Value" target="_blank">
+                                        Get
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="textInfromationContent">
+            <div class="about">
+                <p>
+                    Our Design System is a living document that evolves alongside our organization. It encompasses a range of guidelines, principles, and assets that empower our designers and developers to create cohesive and impactful experiences. Here's what you'll find within our
+                </p>
+            </div>
+            <div class="aboutCards">
+                <div class="row gy-4" style="display: flex; justify-content: center; align-items: center;">
+
+                    @foreach (var item in ViewBag.Cards)
+                    {
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="cards">
+                                <div class="titles">
+                                    <p>@item.CardInsideTitle</p>
+                                </div>
+                                <div class="texts">
+                                    <p>
+                                        @item.CardInsideText
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class="backgroundImage d-lg-block d-none">
+
+        </div>
+    </div>
+
+    <section id="getStarted">
+        <div class="bg-image d-lg-block d-none" style="z-index:-1;">
+
+        </div>
+        <div class="cardContent">
+            <div class="title">
+                <h3>
+                    Get Started
+                </h3>
+            </div>
+            <div class="text">
+                <p>
+                    We invite you to explore our design system and leverage its resources to enhance your
+                    product development process. By utilizing this design system, you'll save time, maintain
+                    consistency, and deliver exceptional experiences to our users.
+                </p>
+            </div>
+            <div class="navigationButtons">
+                <div class="learnMore">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "LearnMoreOthers")?.Value" target="_blank" target="_blank">
+                        Learn More
+                    </a>
+                </div>
+                <div class="getStarted">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedOthers")?.Value" target="_blank" target="_blank">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+            <ul>
+                <a style="text-decoration:none;" href="https://heliosui.notion.site/Privacy-Policy-for-Heliosui-com-324c33b5840d4d4d813723291639aacc" target="_blank">
+                    <li class="privacy">
+                        Privacy Policy
+                    </li>
+                </a>
+                <li class="Lightberry">
+                    Lightberry Design © 2023
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>

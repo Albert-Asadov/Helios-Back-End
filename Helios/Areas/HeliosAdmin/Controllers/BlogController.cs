@@ -62,7 +62,9 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                 CardTitleDetail = model.CardTitleDetail,
                 TitleCard = model.TitleCard,
                 ShortDescription = model.ShortDescription,
-                TextContent = model.TextContent
+                TextContent = model.TextContent,
+
+                 DesignFilter = model.DesignFilter
             };
 
             BlogImages main = new()
@@ -88,6 +90,7 @@ namespace Helios.Areas.HeliosAdmin.Controllers
             BlogVM? model = EditedModel(id);
 
             if (model is null) return BadRequest();
+
 
             return View(model);
         }
@@ -134,6 +137,8 @@ namespace Helios.Areas.HeliosAdmin.Controllers
             blog.ShortDescription = edited.ShortDescription;
 
             blog.TextContent = edited.TextContent;
+
+            blog.DesignFilter = edited.DesignFilter;
 
             _context.SaveChanges();
 
@@ -188,6 +193,8 @@ namespace Helios.Areas.HeliosAdmin.Controllers
                     ShortDescription = x.ShortDescription,
 
                     TextContent = x.TextContent,
+
+                    DesignFilter = x.DesignFilter,
 
                     AllImages = x.blogImages.Select(p => new BlogImages
                     {

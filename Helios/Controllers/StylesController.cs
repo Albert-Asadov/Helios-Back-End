@@ -22,13 +22,10 @@ namespace Helios.Controllers
 
             var firstCategory = _context.categoryStyles.FirstOrDefault();
 
-            // Если есть хотя бы одна категория, перенаправить пользователя на LoadContent с идентификатором первой категории
             if (firstCategory != null)
             {
                 return RedirectToAction("LoadContent", new { categoryId = firstCategory.Id });
             }
-
-            // Если нет категорий, вернуть просто представление Index без категорий
             return View();
         }
 

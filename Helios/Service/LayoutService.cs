@@ -23,6 +23,12 @@ namespace Helios.Service
 
             return categories;
         }
+
+        public List<Setting> GetSettings()
+        {
+            List<Setting> settings = _context.Settings.ToList();
+            return settings;
+        }
     }
 }
 

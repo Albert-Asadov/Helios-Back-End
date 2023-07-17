@@ -239,6 +239,12 @@ body {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 1920px) {
+    .rightSide #content {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
 .rightSide #smallAndMediumMenu {
   padding: 20px;
   border-bottom: 1px solid #232323;

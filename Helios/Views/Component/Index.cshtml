@@ -1,4 +1,5 @@
 ﻿@model Component
+@inject Helios.Service.LayoutService _layoutServices
 
 @section CSS {
 
@@ -10,17 +11,20 @@
     List<Category> category = ViewBag.Category;
 }
 <div id="rightSide">
+    <div class="image d-lg-block d-none">
+
+    </div>
     <div class="subMenu_contents">
         <div id="subMenuses" class="d-lg-block d-md-none d-none">
             <ul>
                 @foreach (var item in category)
                 {
 
-                     var isActive = item.Id == ViewBag.categoryId;
+                    var isActive = item.Id == ViewBag.categoryId;
 
                     <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
 
-                            <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    <li class="@((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
                     </a>
                 }
             </ul>
@@ -114,24 +118,24 @@
                         </div>
                     </li>
                     @foreach (var item in category)
-                     {
-                            var isActive = item.Id == ViewBag.categoryId;
+                    {
+                        var isActive = item.Id == ViewBag.categoryId;
                         <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
-                             <li class="hoverColorSubMenus  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                        <li class="hoverColorSubMenus  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
                         </a>
 
-                     }
+                    }
                 </ul>
             </div>
             <section id="blogMainCard">
-                <div class="blogCard">
-                    <img src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
+                <div class="blogCard" style="height:100%;">
+                    <img style="object-fit:contain !important;" src="~/assets/image/BlogImages/@Model.ComponentImages.FirstOrDefault(x=>x.IsMain ==true )?.imagePath" alt="">
                 </div>
             </section>
             <section id="textContent">
                 <div class="text">
                     <p>
-                       @Model.shortDescription
+                        @Model.shortDescription
                     </p>
                 </div>
             </section>
@@ -147,9 +151,7 @@
                 </div>
             </section>
 
-            <div class="image d-lg-block d-none">
 
-            </div>
             <section id="iframe">
                 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
                         src="@Model.URL"
@@ -160,7 +162,7 @@
         </div>
     </div>
     <section id="getStarteds">
-        <div class="bg-image d-lg-block d-none">
+        <div class="bg-image d-lg-block d-none" style="z-index:-1;">
 
         </div>
         <div class="cardContent">
@@ -178,20 +180,22 @@
             </div>
             <div class="navigationButtons">
                 <div class="learnMore">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "LearnMoreOthers")?.Value" target="_blank">
                         Learn More
                     </a>
                 </div>
                 <div class="getStarted">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedOthers")?.Value" target="_blank">
                         Get Started
                     </a>
                 </div>
             </div>
             <ul>
+                <a style="text-decoration:none;" href="https://heliosui.notion.site/Privacy-Policy-for-Heliosui-com-324c33b5840d4d4d813723291639aacc">
                 <li class="privacy">
                     Privacy Policy
                 </li>
+                </a>
                 <li class="Lightberry">
                     Lightberry Design © 2023
                 </li>

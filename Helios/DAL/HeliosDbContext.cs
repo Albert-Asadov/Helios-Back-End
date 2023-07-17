@@ -20,7 +20,21 @@ namespace Helios.DAL
         public DbSet<CategoryStyle> categoryStyles { get; set; }
         public DbSet<StylesCategory> StylesCategories { get; set; }
         public DbSet<StylesImage> StylesImages { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Introduction> Introductions { get; set; }
+        public DbSet<IntroductionCards> introductionCards { get; set; }
 
+
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Setting>()
+               .HasIndex(s => s.Key)
+               .IsUnique();
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
 

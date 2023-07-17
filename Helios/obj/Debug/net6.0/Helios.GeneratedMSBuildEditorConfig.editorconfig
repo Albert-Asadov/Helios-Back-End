@@ -72,6 +72,42 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvQ29tcG9uZW50L0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Introduction/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Introduction/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Introduction/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Introduction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/IntroductionCard/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uQ2FyZC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/IntroductionCard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvSW50cm9kdWN0aW9uQ2FyZC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Setting/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvU2V0dGluZy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Setting/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvU2V0dGluZy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Setting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvU2V0dGluZy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/albertasadov/Desktop/Helios/Helios/Areas/HeliosAdmin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSGVsaW9zQWRtaW4vVmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -114,6 +150,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/albertasadov/Desktop/Helios/Helios/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/albertasadov/Desktop/Helios/Helios/Views/Introduction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSW50cm9kdWN0aW9uL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/albertasadov/Desktop/Helios/Helios/Views/Shared/_Layout.cshtml]

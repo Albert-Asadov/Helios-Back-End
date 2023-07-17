@@ -1,4 +1,4 @@
-﻿
+﻿@inject Helios.Service.LayoutService _layoutServices
 @{
     List<Blog> blog = ViewBag.New;
 
@@ -8,261 +8,266 @@
 }
 
 <div class="rightSide">
-    <div id="smallAndMediumMenu" class="d-lg-none d-block">
-        <div class="content">
-            <div class="imageses">
-                <a href="./Index.html">
-                    <img src="./assets/image/TogetherLogo.svg" alt="">
-                </a>
-            </div>
-            <div class="HamburgerMenu">
-                <img src="./assets/image/MaskMenu.png" alt="">
+    <div id="content">
+        <div id="smallAndMediumMenu" class="d-lg-none d-block">
+            <div class="content">
+                <div class="imageses">
+                    <a href="./Index.html">
+                        <img src="./assets/image/TogetherLogo.svg" alt="">
+                    </a>
+                </div>
+                <div class="HamburgerMenu">
+                    <img src="./assets/image/MaskMenu.png" alt="">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="smallAndMediumNavBar" class="d-lg-none col-12">
-        <div class="contents">
-            <nav>
-                <ul>
-                    <a href="./Index.html" class="hoverGrays activeHoverLiSubMenus">
-                    <li>
-                        Home
-                    </li>
-                    </a>
-                    <a href="./Introduction.html" class="hoverGrays">
-                    <li>
-                        Introduction
-                    </li>
-                    </a>
-                    <a href="./Blog.html" class="hoverGrays">
-                    <li>
-                        Blog
-                    </li>
-                    </a>
-                    <a href="./Styles.html" class="hoverGrays">
-                    <li>
-                        Styles
-                    </li>
-                    </a>
-                    <li class="component">
-                        <div class="accordion">
-                            <div class="accordion-item">
-                                <div class="accordion-header">
-                                    Components
+        <div id="smallAndMediumNavBar" class="d-lg-none col-12">
+            <div class="contents">
+                <nav>
+                    <ul>
+                        <a href="./Index.html" class="hoverGrays activeHoverLiSubMenus">
+                        <li>
+                            Home
+                        </li>
+                        </a>
+                        <a href="./Introduction.html" class="hoverGrays">
+                        <li>
+                            Introduction
+                        </li>
+                        </a>
+                        <a href="./Blog.html" class="hoverGrays">
+                        <li>
+                            Blog
+                        </li>
+                        </a>
+                        <a href="./Styles.html" class="hoverGrays">
+                        <li>
+                            Styles
+                        </li>
+                        </a>
+                        <li class="component">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        Components
 
-                                    <img src="./assets/image/Mask.svg" alt="">
-                                </div>
+                                        <img src="./assets/image/Mask.svg" alt="">
+                                    </div>
 
-                                <div class="accordion-content">
-                                    <ul>
-                                        <li class="hoverActives">
-                                            WEB
-                                        </li>
-                                        <li class="hoverActives">
-                                            IOS
-                                            <div class="buttonNavPlanned">
-                                                <a href="">
-                                                    Planned
-                                                </a>
-                                            </div>
-                                        </li>
-                                        <li class="hoverActives">
-                                            Android
-                                            <div class="buttonNavPlanned">
-                                                <a href="">
-                                                    Planned
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    <div class="accordion-content">
+                                        <ul>
+                                            <li class="hoverActives">
+                                                WEB
+                                            </li>
+                                            <li class="hoverActives">
+                                                IOS
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                            <li class="hoverActives">
+                                                Android
+                                                <div class="buttonNavPlanned">
+                                                    <a href="">
+                                                        Planned
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
 
-    <div id="subMenus" class="d-lg-none">
-        <ul>
-            <li class="menuTitle">
-                <div class="icon">
-                    <img src="./assets/image/Maskmain menu.svg" alt="">
+        <div id="subMenus" class="d-lg-none">
+            <ul>
+                <li class="menuTitle">
+                    <div class="icon">
+                        <img src="./assets/image/Maskmain menu.svg" alt="">
+                    </div>
+                    <div class="text">
+                        Main Menu
+                    </div>
+                </li>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Buttons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li class="hoverColorSubMenus">Forms and Inputs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Icons</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Colors</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Grid System</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Navigation</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Alerts and Notifications</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Modals and Dialogs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Avatars and Images</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tables</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Cards</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Accordions and Tabs</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Badges and Labels</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Progress Indicators</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Tooltips and Popovers</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Pagination</li>
+                </a>
+                <a href="./Compenents.html">
+                <li>Miscellaneous</li>
+                </a>
+            </ul>
+        </div>
+
+        <section id="main-content">
+            <div class="cardContent">
+                <div class="title">
+                    <h2>
+                        Welcome to Helios Design System
+                    </h2>
                 </div>
                 <div class="text">
-                    Main Menu
+                    <p>
+                        HeliosUI design system provides a comprehensive guide and toolkit for creating
+                        visually stunning digital products. It promotes consistency, efficiency, and
+                        delightful user experiences, empowering designers, developers, and product managers
+                        to build remarkable user interfaces aligned with the brand identity.
+                    </p>
                 </div>
-            </li>
-            <a href="./Compenents.html">
-            <li class="hoverColorSubMenus">Buttons</li>
-            </a>
-            <a href="./Compenents.html">
-            <li class="hoverColorSubMenus">Forms and Inputs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Icons</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Colors</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Grid System</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Cards</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Navigation</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Alerts and Notifications</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Modals and Dialogs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Avatars and Images</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Tables</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Cards</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Accordions and Tabs</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Badges and Labels</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Progress Indicators</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Tooltips and Popovers</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Pagination</li>
-            </a>
-            <a href="./Compenents.html">
-            <li>Miscellaneous</li>
-            </a>
-        </ul>
-    </div>
-
-    <section id="main-content">
-        <div class="cardContent">
+                <div class="navigationButtons">
+                    <div class="learnMore">
+                        <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "HomePageLearnMore")?.Value" target="_blank">
+                            Learn More
+                        </a>
+                    </div>
+                    <div class="getStarted">
+                        <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedUpper")?.Value" target="_blank">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cards" style="z-index: 100;">
             <div class="title">
                 <h2>
-                    Welcome to Helios Design System
+                    News & release notes
                 </h2>
             </div>
-            <div class="text">
-                <p>
-                    HeliosUI design system provides a comprehensive guide and toolkit for creating
-                    visually stunning digital products. It promotes consistency, efficiency, and
-                    delightful user experiences, empowering designers, developers, and product managers
-                    to build remarkable user interfaces aligned with the brand identity.
-                </p>
-            </div>
-            <div class="navigationButtons">
-                <div class="learnMore">
-                    <a href="">
-                        Learn More
-                    </a>
-                </div>
-                <div class="getStarted">
-                    <a href="">
-                        Get Started
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="cards"    style="z-index: 100;" >
-        <div class="title">
-            <h2>
-                News & release notes
-            </h2>
-        </div>
 
-        <div class="cards-content">
-            <div class="row gx-3 gy-3">
+            <div class="cards-content">
+                <div class="row gx-3 gy-3">
 
-                @foreach (var item in blog)
+                    @foreach (var item in blog)
                     {
-                    <div class="col-lg-4 col-md-6 col-12 salam">
-                        <a asp-controller="Blog" asp-action="Index">
-                            <div class="card"  style="height: 100%;">
-                                <div class="image"  style="height:144px;">
-                                    <img style="object-fit:cover;" src="./assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
-                                </div>
-                                <div class="typography-content">
-                                    <div class="titleContent">
-                                        <p>
-                                            @item.TitleCard
-                                        </p>
+                        <div class="col-lg-4 col-md-6 col-12 salam">
+                            <a asp-controller="BlogInner" asp-action="Index" asp-route-id="@item.Id">
+                                <div class="card" style="height: 100%;">
+                                    <div class="image" style="height:144px;">
+                                        <img style="object-fit:cover;" src="./assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
                                     </div>
-                                    <div class="textContent" style="width:100%;">
-                                        <p>
-                                            @item.ShortDescription
-                                        </p>
+                                    <div class="typography-content">
+                                        <div class="titleContent">
+                                            <p>
+                                                @item.TitleCard
+                                            </p>
+                                        </div>
+                                        <div class="textContent" style="width:100%;">
+                                            <p>
+                                                @item.ShortDescription
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                }
+                            </a>
+                        </div>
+                    }
 
 
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="desighn">
-        <div class="title">
-            <h2>
-                Design system
-            </h2>
-        </div>
-
-        <div class="cards-content">
-            <div class="row gx-3 gy-3">
-
-                @foreach (var item in design)
-                {
-                    <div class="col-lg-4 col-12 col-md-6">
-                        <a asp-controller="Blog" asp-action="Index">
-                            <div class="card" style="height: 100%;">
-                                <div class="image" style="height:144px;">
-                                    <img style="object-fit:cover;" src="./assets/image/BlogImages/@item.blogImages.FirstOrDefault(x=>x.IsMain==true)?.ImagePath" alt="">
-                                </div>
-                                <div class="typography-content">
-                                    <div class="titleContent">
-                                        <p>
-                                            @item.TitleCard
-                                        </p>
-                                    </div>
-                                    <div class="textContent" style="width:100%;">
-                                        <p>
-                                            @item.ShortDescription
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                }
-
+        </section>
+        <section id="desighn">
+            <div class="title">
+                <h2>
+                    Design system
+                </h2>
             </div>
-        </div>
-    </section>
-    <div class="imageBg d-lg-block d-none">
 
+            <div class="cards-content">
+                <div class="row gx-3 gy-3">
+
+                    @foreach (var designs in design)
+                    {
+                        if (designs.DesignFilter == true)
+                        {
+                            <div class="col-lg-4 col-12 col-md-6">
+                                <a asp-controller="BlogInner" asp-action="Index" asp-route-id="@designs.Id">
+                                    <div class="card" style="height: 100%;">
+                                        <div class="image" style="height:144px;">
+                                            <img style="object-fit:cover;" src="./assets/image/BlogImages/@designs.blogImages.FirstOrDefault(x => x.IsMain == true)?.ImagePath" alt="">
+                                        </div>
+                                        <div class="typography-content">
+                                            <div class="titleContent">
+                                                <p>
+                                                    @designs.TitleCard
+                                                </p>
+                                            </div>
+                                            <div class="textContent" style="width:100%;">
+                                                <p>
+                                                    @designs.ShortDescription
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+        </section>
+        <div class="imageBg d-lg-block d-none" style="z-index:-1;">
+
+        </div>
     </div>
     <section id="getStarted">
-        <div class="background_Images_Blue d-lg-block d-none">
+        <div class="background_Images_Blue d-lg-block d-none" style="z-index:-1;">
 
         </div>
         <div class="cardContent">
@@ -280,20 +285,22 @@
             </div>
             <div class="navigationButtons">
                 <div class="learnMore">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "LearnMoreOthers")?.Value" target="_blank">
                         Learn More
                     </a>
                 </div>
                 <div class="getStarted">
-                    <a href="">
+                    <a href="@_layoutServices.GetSettings().FirstOrDefault(s => s.Key == "GetStartedOthers")?.Value" target="_blank">
                         Get Started
                     </a>
                 </div>
             </div>
             <ul>
+                <a style="text-decoration:none;" href="https://heliosui.notion.site/Privacy-Policy-for-Heliosui-com-324c33b5840d4d4d813723291639aacc" target="_blank">
                 <li class="privacy">
                     Privacy Policy
                 </li>
+                </a>
                 <li class="Lightberry">
                     Lightberry Design © 2023
                 </li>
