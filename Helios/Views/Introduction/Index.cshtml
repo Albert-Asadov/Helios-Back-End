@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./assets/css/Introduction.css">
 
 }
+@{
+    List<Category> categories = _layoutServices.AllCategories();
+
+}
 
 
 <div id="rightside">
@@ -15,7 +19,7 @@
         <div id="smallAndMediumMenu" class="d-lg-none d-block">
             <div class="content">
                 <div class="image">
-                    <a href="./Index.html">
+                    <a asp-controller="Home" asp-action="Index" >
                         <img src="~/assets/image/TogetherLogo.svg" alt="">
                     </a>
                 </div>
@@ -29,22 +33,22 @@
             <div class="contents">
                 <nav>
                     <ul>
-                        <a href="./Index.html" class="hoverGrays">
+                        <a asp-controller="Home" asp-action="Index" class="hoverGrays">
                         <li>
                             Home
                         </li>
                         </a>
-                        <a href="" class="hoverGrays activeHoverLiSubMenus ">
+                        <a asp-controller="Introduction" asp-action="Index" class="hoverGrays activeHoverLiSubMenus">
                         <li>
                             Introduction
                         </li>
                         </a>
-                        <a href="./Blog.html" class="hoverGrays">
+                        <a asp-controller="Blog" asp-action="Index" class="hoverGrays">
                         <li>
                             Blog
                         </li>
                         </a>
-                        <a href="./Styles.html" class="hoverGrays">
+                        <a asp-controller="Styles" asp-action="Index" class="hoverGrays">
                         <li>
                             Styles
                         </li>
@@ -89,7 +93,7 @@
             </div>
         </div>
 
-        <div id="subMenus">
+        <div id="subMenus"  style="max-height: 100vh; overflow-y: auto;">
             <ul>
                 <li class="menuTitle">
                     <div class="icon">
@@ -99,60 +103,14 @@
                         Main Menu
                     </div>
                 </li>
-                <a href="./Compenents.html">
-                <li class="hoverColorSubMenus">Buttons</li>
-                </a>
-                <a href="./Compenents.html">
-                <li class="hoverColorSubMenus">Forms and Inputs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Icons</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Colors</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Grid System</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Cards</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Navigation</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Alerts and Notifications</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Modals and Dialogs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Avatars and Images</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Tables</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Cards</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Accordions and Tabs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Badges and Labels</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Progress Indicators</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Tooltips and Popovers</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Pagination</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Miscellaneous</li>
-                </a>
+                @foreach (var item in categories)
+                {
+                    var isActive = item.Id == ViewBag.categoryId;
+                    <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
+                    <li class="hoverColorSubMenus  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    </a>
+
+                }
             </ul>
         </div>
 

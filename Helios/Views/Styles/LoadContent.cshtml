@@ -35,12 +35,12 @@
             <div id="smallAndMediumMenu" class="d-lg-none d-block">
                 <div class="content">
                     <div class="imagesesH">
-                        <a href="./Index.html">
-                            <img src="./assets/image/TogetherLogo.svg" alt="">
+                        <a asp-controller="Home" asp-action="Index" >
+                            <img src="~/assets/image/TogetherLogo.svg" alt="">
                         </a>
                     </div>
                     <div class="HamburgerMenu">
-                        <img src="./assets/image/MaskMenu.png" alt="">
+                        <img src="~/assets/image/MaskMenu.png" alt="">
                     </div>
                 </div>
             </div>
@@ -49,22 +49,22 @@
                 <div class="contents">
                     <nav>
                         <ul>
-                            <a href="./Index.html" class="hoverGrays">
+                            <a asp-controller="Home" asp-action="Index" class="hoverGrays ">
                             <li>
                                 Home
                             </li>
                             </a>
-                            <a href="./Introduction.html" class="hoverGrays">
+                            <a asp-controller="Introduction" asp-action="Index" class="hoverGrays">
                             <li>
                                 Introduction
                             </li>
                             </a>
-                            <a href="./Blog.html" class="hoverGrays">
+                            <a asp-controller="Blog" asp-action="Index" class="hoverGrays">
                             <li>
                                 Blog
                             </li>
                             </a>
-                            <a href="./Styles.html" class="hoverGrays activeHoverLiSubMenus ">
+                            <a asp-controller="Styles" asp-action="Index" class="hoverGrays activeHoverLiSubMenus">
                             <li>
                                 Styles
                             </li>
@@ -75,7 +75,7 @@
                                         <div class="accordion-header">
                                             Components
 
-                                            <img src="./assets/image/Mask.svg" alt="">
+                                            <img src="~/assets/image/Mask.svg" alt="">
                                         </div>
 
                                         <div class="accordion-content">
@@ -109,11 +109,11 @@
                 </div>
             </div>
 
-            <div id="subMenus" class="">
+            <div id="subMenus" class=""  style="max-height: 100vh; overflow-y: auto;">
                 <ul>
                     <li class="menuTitle">
                         <div class="icon">
-                            <img src="./assets/image/Maskmain menu.svg" alt="">
+                            <img src="~/assets/image/Maskmain menu.svg" alt="">
                         </div>
                         <div class="text">
                             Main Menu

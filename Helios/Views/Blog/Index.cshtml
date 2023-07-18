@@ -4,6 +4,8 @@
 @{
     int totalPage = (int)ViewBag.TotalPage;
     int currentPage = (int)ViewBag.CurrentPage;
+    List<Category> categories = _layoutServices.AllCategories();
+
 }
 
 @section CSS {
@@ -19,7 +21,7 @@
         <div id="smallAndMediumMenu" class="d-lg-none d-block">
             <div class="content">
                 <div class="image">
-                    <a href="./Index.html">
+                    <a asp-controller="Home" asp-action="Index" >
                         <img src="~/assets/image/TogetherLogo.svg" alt="">
                     </a>
                 </div>
@@ -93,7 +95,7 @@
             </div>
         </div>
 
-        <div id="subMenus" class="">
+        <div id="subMenus" class=""  style="max-height: 100vh; overflow-y: auto;">
             <ul>
                 <li class="menuTitle">
                     <div class="icon">
@@ -103,60 +105,13 @@
                         Main Menu
                     </div>
                 </li>
-                <a href="./Compenents.html">
-                <li class="hoverColorSubMenus">Buttons</li>
-                </a>
-                <a href="./Compenents.html">
-                <li class="hoverColorSubMenus">Forms and Inputs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Icons</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Colors</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Grid System</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Cards</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Navigation</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Alerts and Notifications</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Modals and Dialogs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Avatars and Images</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Tables</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Cards</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Accordions and Tabs</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Badges and Labels</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Progress Indicators</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Tooltips and Popovers</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Pagination</li>
-                </a>
-                <a href="./Compenents.html">
-                <li>Miscellaneous</li>
-                </a>
+                @foreach (var item in categories)
+                {
+                    var isActive = item.Id == ViewBag.categoryId;
+                    <a asp-controller="Component" asp-action="Index" asp-route-categoryId="@item.Id">
+                    <li class="hoverColorSubMenu  @((isActive && ViewBag.categoryId == item.Id) ? "activeHoverLiSubMenu" : "")">@item.Name</li>
+                    </a>
+                }
             </ul>
         </div>
 
@@ -201,20 +156,54 @@
 
                 </div>
             </div>
-
             <div class="pagination">
                 <ul>
-                    @for (int i = 1; i <= totalPage; i++)
+                    @if (totalPage <= 3)
                     {
-                        string activeClass = (i == currentPage) ? "activePagination" : "";
-                        <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
-                        <li>
-                            @i
-                        </li>
+                        @for (int i = 1; i <= totalPage; i++)
+                        {
+                            string activeClass = (i == currentPage) ? "activePagination" : "";
+                            <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
+                            <li>@i</li>
+                            </a>
+                        }
+                    }
+                    else
+                    {
+ 
+                        <a href="@Url.Action("Index", new { page = 1 })">
+                        <li>1</li>
+                        </a>
+
+                        @if (currentPage > 2)
+                        {
+                            <li>...</li>
+                        }
+
+                        @for (int i = currentPage - 1; i <= currentPage + 1; i++)
+                        {
+                            if (i > 1 && i < totalPage)
+                            {
+                                string activeClass = (i == currentPage) ? "activePagination" : "";
+                                <a href="@Url.Action("Index", new { page = i })" class="@activeClass">
+                                <li>@i</li>
+                                </a>
+                            }
+                        }
+
+                        @if (currentPage < totalPage - 1)
+                        {
+                            <li>...</li>
+                        }
+
+ 
+                        <a href="@Url.Action("Index", new { page = totalPage })">
+                        <li>@totalPage</li>
                         </a>
                     }
                 </ul>
             </div>
+
 
         </section>
         <div class="imageBg d-lg-block d-none">

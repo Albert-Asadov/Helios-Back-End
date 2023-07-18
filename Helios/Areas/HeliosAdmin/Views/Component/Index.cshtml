@@ -1,7 +1,19 @@
 ﻿@model IEnumerable<Component>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p style="padding-top:10px;padding-left:10px;">
+    <a style="
+     background-color: gray;
+     display: inline-block;
+     text-decoration: none;
+     height: 30px;
+     width: 120px;
+     color: white;
+     text-align: center;
+     border-radius: 14px;
+     padding-top: 4px;"
+       asp-action="Create">
+        Create New
+    </a>
 </p>
 
 <table class="table">
@@ -33,10 +45,10 @@
                              alt="Product Images" />
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.shortDescription)
+                        @(item.shortDescription.Length > 15 ? string.Concat(item.shortDescription.Substring(0, 15), "...") : item.shortDescription)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.URL)
+                        @(item.URL.Length > 15 ? string.Concat(item.URL.Substring(0, 15), "...") : item.URL)
                     </td>
                     <td>
                         @Html.Raw((item.textContent.Length > 15 ? string.Concat(item.textContent.Substring(0, 15), "...") : item.textContent))
