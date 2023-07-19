@@ -5,7 +5,7 @@ namespace Helios.Entities
 {
 	public class Blog:BaseEntity
 	{
-        [StringLength(maximumLength: 19)]
+        [StringLength(maximumLength: 40)]
         public string TitleCard { get; set; }
 
         [StringLength(maximumLength: 40)]

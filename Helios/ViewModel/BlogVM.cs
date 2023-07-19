@@ -10,7 +10,7 @@ namespace Helios.ViewModel
 	{
         public int Id { get; set; }
 
-        [StringLength(maximumLength: 19)]
+        [StringLength(maximumLength: 40)]
         public string? TitleCard { get; set; }
 
         [StringLength(maximumLength: 40)]

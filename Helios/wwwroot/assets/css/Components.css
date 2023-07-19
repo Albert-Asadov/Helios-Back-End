@@ -587,15 +587,21 @@ body {
   color: #FFF;
 }
 #rightSide .subMenu_contents #contents #Title-text .text {
-  margin-top: 20px;
-  width: auto;
+    object-fit:cover;
+    width: auto;
 }
+
+#rightSide .subMenu_contents #contents #Title-text .text img {
+    object-fit:cover;
+        width: 100%;
+}
+    
 #rightSide .subMenu_contents #contents #Title-text .text p {
-  color: var(--solid-gray-g-100, #C2C6CE);
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  text-align: justify;
+        color: var(--solid-gray-g-100, #C2C6CE);
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        text-align: justify;
 }
 @media screen and (min-width: 992px) and (max-width: 1400px) {
   #rightSide .subMenu_contents #contents #Title-text {

@@ -632,13 +632,19 @@ body {
   margin-top: 20px;
   width: auto;
 }
-#rightSide .subMenu_content #content #Title-text .text p {
-  color: var(--solid-gray-g-100, #C2C6CE);
-  font-size: 18px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  text-align: justify;
+#rightSide .subMenu_content #content #Title-text .text img{
+
+    width:100%;
+    object-fit:cover;
+
 }
+#rightSide .subMenu_content #content #Title-text .text p {
+        color: var(--solid-gray-g-100, #C2C6CE);
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        text-align: justify;
+ }
 @media screen and (min-width: 992px) and (max-width: 1400px) {
   #rightSide .subMenu_content #content #Title-text {
     margin-right: 30px;
